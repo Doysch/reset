@@ -6,7 +6,6 @@ class GreenspacesController < ApplicationController
 
   def create
     @greenspace = Greenspace.new(greenspace_params)
-    @greenspace.user = current_user
     if @greenspace.save
       redirect_to
     else
@@ -19,7 +18,7 @@ class GreenspacesController < ApplicationController
   end
 
   def index
-    @greenspace = Greenspace.all
+    @greenspaces = Greenspace.all
   end
 
   private
