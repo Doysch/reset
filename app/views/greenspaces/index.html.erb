@@ -1,1 +1,11 @@
 <h1>index</h1>
+<% @greenspaces.each do |greenspace| %>
+<div class="cards">
+<%= image_tag greenspace.photo, style: 'height:300px;' %>
+<%=  greenspace.location %>
+<%=  greenspace.name %>
+
+</div>
+
+<% end %>
+
