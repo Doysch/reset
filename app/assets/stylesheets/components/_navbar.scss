@@ -1,16 +1,24 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background:#96BAFF;
+  //justify-content: space-between;
+  //background:#96BAFF;
+  background: rgb(124,131,253);
+  background: linear-gradient(90deg, rgba(124,131,253,1) 0%, rgba(150,186,255,1) 50%, rgba(125,237,255,1) 100%);
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 65px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+  //   flex-grow: 0;
+  // }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  // .navbar-lewagon .navbar-brand img {
+    //   width: 40px;
+    // }
+.container-navbar {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
