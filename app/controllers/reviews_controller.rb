@@ -15,6 +15,23 @@ class ReviewsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+
+    def edit
+      @review = Review(params[:id])
+    end
+
+    def update
+      @review = Review.find(params[:id])
+      @review.update(review_params)
+      redirect_to _path
+    end
+
+    def destroy
+      @review = Review.find(params[:id])
+      @review.destroy
+      redirect_to greenspace_path(@review.greenspace), status: :see_other
+    end
+
   end
 
   private
