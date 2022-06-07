@@ -25,13 +25,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_113633) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.float "rating"
-    t.bigint "greenspaces_id", null: false
+    t.bigint "greenspace_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["greenspaces_id"], name: "index_reviews_on_greenspaces_id"
-    t.index ["users_id"], name: "index_reviews_on_users_id"
+    t.index ["greenspace_id"], name: "index_reviews_on_greenspace_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,20 +47,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_113633) do
   end
 
   create_table "walks", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "greenspaces_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "greenspace_id", null: false
     t.string "music"
     t.text "notes"
     t.integer "stress_level_before"
     t.integer "stress_level_after"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["greenspaces_id"], name: "index_walks_on_greenspaces_id"
-    t.index ["users_id"], name: "index_walks_on_users_id"
+    t.index ["greenspace_id"], name: "index_walks_on_greenspace_id"
+    t.index ["user_id"], name: "index_walks_on_user_id"
   end
 
-  add_foreign_key "reviews", "greenspaces", column: "greenspaces_id"
-  add_foreign_key "reviews", "users", column: "users_id"
-  add_foreign_key "walks", "greenspaces", column: "greenspaces_id"
-  add_foreign_key "walks", "users", column: "users_id"
+  add_foreign_key "reviews", "greenspaces"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "walks", "greenspaces"
+  add_foreign_key "walks", "users"
 end
