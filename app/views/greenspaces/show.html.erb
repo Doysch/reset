@@ -1,1 +1,63 @@
-<h1>Show page</h1>
+<div class="container">
+
+  <div class="card-trip">
+    <%= image_tag @greenspace.photo %>
+      <div class="middle-images mt-2">
+      <%= image_tag @greenspace.photo %>
+      <%= image_tag @greenspace.photo %>
+      <%= image_tag @greenspace.photo %>
+    </div>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @greenspace.name %></h2>
+          <p><%= @greenspace.description %></p>
+          <p>rating:<%= @greenspace.average_rating %></p>
+          <p>Distance: 1km</p>
+        </div>
+        <h2 class="card-trip-pricing"></h2>
+        <img src="" class="card-trip-user avatar-bordered" />
+      </div>
+  </div>
+
+<%# Reviews %>
+
+  <div class="card-trip mt-2">
+    <div class="card-trip-infos">
+      <div>
+        <strong><h2>Robster_82</h2></strong>
+        <p class="pt-1">"A very nice walk I went there when my boss stressed me out and I came out feeling like a new person"</p>
+        <i class="fa-solid fa-star"></i>
+        <%= @greenspace.average_rating %>
+      </div>
+      <h2 class="card-trip-pricing"></h2>
+      <img src="" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+   <div class="card-trip mt-2">
+    <div class="card-trip-infos">
+      <div>
+        <strong><h2>Master_bacon</h2></strong>
+        <p class="pt-1">"I went there when my cat ate my homework"</p>
+        <i class="fa-solid fa-star"></i>
+        <%= @greenspace.average_rating %>
+      </div>
+      <h2 class="card-trip-pricing"></h2>
+      <img src="" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  <div class="card-trip mt-2">
+    <div class="card-trip-infos">
+      <div>
+        <strong><h2>Pilar_shreds</h2></strong>
+        <p class="pt-1">"I found this park and I've been going to it for 2 weeks now, good vibes!"</p>
+        <i class="fa-solid fa-star"></i>
+        <%= @greenspace.average_rating %>
+      </div>
+      <h2 class="card-trip-pricing"></h2>
+      <img src="" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+  <a class="btn btn-gradient my-2" href="#">Next</a>
+</div>
