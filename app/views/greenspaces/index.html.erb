@@ -1,11 +1,18 @@
-<h1>index</h1>
-<% @greenspaces.each do |greenspace| %>
-<div class="cards">
-<%= image_tag greenspace.photo, style: 'height:300px;' %>
-<%=  greenspace.location %>
-<%=  greenspace.name %>
-
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="cards align-items-center">
+        <% @greenspaces.each do |greenspace| %>
+          <div class="greenspace-card mb-5 w-75 mx-auto">
+            <%= image_tag greenspace.photo, style: 'width:150px;', class:'rounded float-start' %>
+            <span class="card-walk-infos">
+              <%=  greenspace.location %>
+              <%=  greenspace.name %>
+              <%= greenspace.average_rating %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<% end %>
-

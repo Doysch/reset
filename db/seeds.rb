@@ -21,7 +21,7 @@ puts "created #{greenspace1.name}!!!"
 greenspace2 = Greenspace.create(
   location: "Hoxton",
   description: "Nice park",
-  photo: 'park2.jpg',
+  photo: 'park1.jpg',
   average_rating: 4,
   name: "Hoxton Park"
 )
@@ -31,7 +31,7 @@ puts "created #{greenspace2.name}!!!"
 greenspace3 = Greenspace.create(
   location: "Haggerston",
   description: "quiet green space",
-  photo: 'park3.jpg',
+  photo: 'park1.jpg',
   average_rating: 3.5,
   name: "Haggerston Park"
 )
