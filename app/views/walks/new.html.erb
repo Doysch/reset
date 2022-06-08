@@ -33,6 +33,7 @@
         <input class="form-control string optional" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
         <output>5</output>
       </div>
+
       <%= f.input :music,
               as: :radio_buttons,
               collection_wrapper_tag: 'div',
@@ -40,7 +41,10 @@
               item_wrapper_class: 'category-item',
               input_html: {class: 'category-selector'},
               collection: Walk::MUSIC_TYPES %>
-      <%= f.submit %>
+
+      <div class="d-grid gap-2">
+        <%= f.submit class: 'btn btn-primary fs-4' %>
     <% end %>
+    </div>
   </div>
 </div>
