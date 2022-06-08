@@ -1,19 +1,14 @@
-<div class="container mt-5">
-  <div class="row">
-    <div class="col">
-      <div class="cards align-items-center">
-        <% @greenspaces.each do |greenspace| %>
-          <div class="greenspace-card mb-5 w-75 mx-auto">
-            <%= image_tag greenspace.photo, style: 'width:150px;', class:'float-start' %>
-            <div class="card-walk-infos">
-              <p><%=  greenspace.name %></p> <br>
-              <p><%=  greenspace.location %></p>
-              <p><%= greenspace.average_rating %></p>
-            </div>
-           <%= link_to 'Select', greenspace_path(greenspace), class:"select-button" %>
-          </div>
-        <% end %>
+<div class="container">
+  <% @greenspaces.each do |greenspace| %>
+    <div class="card-product">
+       <% link_to 'park', greenspace_path(greenspace) %>
+      <%= image_tag greenspace.photo, style: 'width:150px;', class:'float-start' %>
+
+      <div class="card-product-infos">
+        <p>"<%=  greenspace.name %>"</p>
+        <p><%=  greenspace.location %></p>
+        <p>rating: <%= greenspace.average_rating %></p>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
