@@ -1,14 +1,15 @@
 <div class="container">
   <% @greenspaces.each do |greenspace| %>
-    <div class="card-product">
-       <% link_to 'park', greenspace_path(greenspace) %>
-      <%= image_tag greenspace.photo, style: 'width:150px;', class:'float-start' %>
+    <%= link_to greenspace_path(greenspace), class: 'greenspace-card-link' do %>
+      <div class="card-product">
+        <%= image_tag greenspace.photo, style: 'width:150px;', class:'float-start' %>
 
-      <div class="card-product-infos">
-        <p>"<%=  greenspace.name %>"</p>
-        <p><%=  greenspace.location %></p>
-        <p>rating: <%= greenspace.average_rating %></p>
+        <div class="card-product-infos">
+          <p>"<%=  greenspace.name %>"</p>
+          <p><%=  greenspace.location %></p>
+          <p>rating: <%= greenspace.average_rating %></p>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
