@@ -1,7 +1,39 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# require "open-uri"
+
+puts "cleaning database..."
+Greenspace.destroy_all
+# User.destroy_all
+# puts "creating users"
+
+# User.new(email: "dave@gmail.com", password: "123456")
+
+puts "creating greenspaces"
+greenspace1 = Greenspace.create(
+  location: "Shoreditch",
+  description: "Clean and quiet green space",
+  photo: 'park1.jpg',
+  average_rating: 4.5,
+  name: "Shoreditch Park"
+)
+
+puts "created #{greenspace1.name}!!!"
+
+greenspace2 = Greenspace.create(
+  location: "Hoxton",
+  description: "Nice park",
+  photo: 'park2.jpg',
+  average_rating: 4,
+  name: "Hoxton Park"
+)
+
+puts "created #{greenspace2.name}!!!"
+
+greenspace3 = Greenspace.create(
+  location: "Haggerston",
+  description: "quiet green space",
+  photo: 'park3.jpg',
+  average_rating: 3.5,
+  name: "Haggerston Park"
+)
+
+puts "created #{greenspace3.name}!!!"
