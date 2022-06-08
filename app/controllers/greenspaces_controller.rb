@@ -19,6 +19,9 @@ class GreenspacesController < ApplicationController
 
   def index
     @greenspaces = Greenspace.all
+    if params[:query].present?
+      @postcode = params[:query]
+    end
   end
 
   private
