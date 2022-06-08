@@ -2,33 +2,51 @@
 .banner {
   background-size:cover;
   background-position: center;
-  padding: 300px 0;
+  // padding: 300px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px 100px;
 }
 
+.reset-logo{
+  width: 150px;
+  margin: 0 auto;
+}
+.banner-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.banner h1 {
-  margin: 0;
-  color: rgb(218, 61, 182);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.banner h2 {
+  margin: 60px;
+  color: rgb(242, 238, 241);
+  text-shadow: 5px 5px 10px rgba(9, 9, 9, 0.2);
   font-family: monospace;
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-top: -290px;
-  position: sticky;
+}
+
+.search_bar{
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .search-form-control {
-  position: absolute;
-  padding: 30px
+
 }
 
 .search-form-control .form-control {
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
-  width: 80%;
   border-radius: 5px;
+  width: 61vw;
 }
 
 .search-form-control .form-control:focus {
