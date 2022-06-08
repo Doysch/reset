@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: url(<%= asset_path('home.jpg')%>">
+  <div class="container">
+    <h1>Reset your mind.....Reset you</h1>
+<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
+  <div class="search-form-control form-group">
+    <input class="form-control string required" placeholder="Enter postcode" type="text" name="search[query]" id="search_query" />
+  </div>
+</form>
+  </div>
+</div>
