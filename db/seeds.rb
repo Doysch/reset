@@ -37,3 +37,13 @@ greenspace3 = Greenspace.create(
 )
 
 puts "created #{greenspace3.name}!!!"
+
+greenspace4 = Greenspace.create(
+  location: "Haggerston",
+  description: "quiet green space",
+  photo: 'park1.jpg',
+  average_rating: 3.5,
+  name: "Haggerston Park"
+)
+
+puts "created #{greenspace4.name}!!!"
