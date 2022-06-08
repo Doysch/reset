@@ -5,7 +5,7 @@
 }
 
 .category-item {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
 }
 
 .category-selector {
@@ -18,7 +18,7 @@
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
-  font-size: 12px;
+  font-size: 18px;
   text-align: left;
   padding: 10px 10px 30px 10px;
   border: 1px solid #EAEAEA;
@@ -28,5 +28,7 @@
 
 .category-selector:checked + label {
   color: white !important;
-  background-color: #96BAFF;
+  //background-color: #96BAFF;
+  background-color: rgb(84, 234, 136);
+
 }

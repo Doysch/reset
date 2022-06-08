@@ -1,6 +1,6 @@
 .simple_form {
   padding: 25px;
-  //margin-top: 100px;
+  margin-top: 200px;
 }
 
 .category-stress {
@@ -8,8 +8,16 @@
 }
 
 .form-container {
-  border: 1px solid rgb(51, 171, 231);
-  padding: 50px;
+  //border: 1px solid rgb(21, 131, 186);
+  padding: 20px;
   margin: 20px;
-  background-color: rgb(191, 240, 240);
+  height: 100vh;
+}
+
+.string {
+  font-size: 20px;
+}
+.col-form-label {
+  font-size: 20px;
+  text-align: center;
 }
