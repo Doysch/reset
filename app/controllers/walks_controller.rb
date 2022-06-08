@@ -9,6 +9,7 @@ class WalksController < ApplicationController
     @walk = Walk.new(walk_params)
     @greenspace = Greenspace.find(params[:greenspace_id])
     @walk.greenspace = @greenspace
+    @walk.user = current_user
     if @walk.save
       redirect_to greenspace_path(@greenspace)
     else

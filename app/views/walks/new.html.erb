@@ -1,0 +1,46 @@
+<%# <form class="simple_form new_walk" id="new_walk" novalidate="novalidate" action="/walks" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
+  <div class="mb-3 string optional initial-stress">
+    <label class="string optional mb-3" for="initial_stress">Rate your stress level</label>
+    <input class="form-control string optional" type="range" name="initial_stress" min="0" max="10" step="1" name="initial_stress" id="initial_stress" oninput="this.nextElementSibling.value = this.value">
+    <output>5</output>
+  </div>
+
+  <fieldset class="form-group radio_buttons required snippet_category">
+  <legend class="col-form-label pt-0">Select for your walk <abbr title="required">*</abbr></legend>
+  <div class="category-wrapper">
+    <input type="hidden" name="snippet[category_id]" value="">
+    <div class="category-item">
+      <input class="form-check-input radio_buttons required category-selector" data-style="music" type="radio" value="1" name="snippet[category_id]" id="snippet_category_id_1">
+      <label class="form-check-label collection_radio_buttons" for="snippet_category_id_1">Music</label>
+    </div>
+    <input type="hidden" name="snippet[category_id]" value="">
+    <div class="category-item">
+      <input class="form-check-input radio_buttons required category-selector" data-style="meditation" type="radio" value="1" name="snippet[category_id]" id="snippet_category_id_1">
+      <label class="form-check-label collection_radio_buttons" for="snippet_category_id_1">Meditation</label>
+    </div>
+    ...
+  </div>
+</fieldset>
+
+
+</form> %>
+
+<%= simple_form_for([@greenspace, @walk]) do |f| %>
+  <div class="mb-3 string optional initial-stress">
+    <label class="string optional mb-3" for="stress_level_before">Rate your stress level</label>
+    <input class="form-control string optional" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
+    <output>5</output>
+  </div>
+
+
+  <%= f.input :music,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: Walk::MUSIC_TYPES %>
+
+  <%= f.submit %>
+<% end %>
