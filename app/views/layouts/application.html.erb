@@ -10,10 +10,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body style="background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,237,255,1) 0%, rgba(125,237,255,1) 0%, rgba(0,212,255,1) 100%, rgba(5,213,255,1) 100%);">
-    <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
 
+  <body>
+  <div class="main-container">
     <%= yield %>
+  </div>
+  <%= render "shared/flashes" %>
+  <%= render "shared/navbar" %>
   </body>
 </html>
