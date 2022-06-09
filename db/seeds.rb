@@ -9,7 +9,7 @@ Greenspace.destroy_all
 # User.new(email: "dave@gmail.com", password: "123456")
 
 puts "creating greenspaces"
-greenspace1 = Greenspace.create(
+greenspace1 = Greenspace.new(
   address: "5 Hoxton Square, London N1 6NU",
   description: "Clean and quiet green space",
   average_rating: 4.5,
