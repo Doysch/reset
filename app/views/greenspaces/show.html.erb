@@ -1,11 +1,11 @@
 <div class="container main-container">
 <%= image_tag 'logo.png', class:'index-logo' %>
   <div class="card-trip mb-4">
-    <%= image_tag @greenspace.photo %>
+    <%= cl_image_tag @greenspace.photos[0].key %>
       <div class="middle-images mt-2">
-      <%= image_tag @greenspace.photo %>
-      <%= image_tag @greenspace.photo %>
-      <%= image_tag @greenspace.photo %>
+      <%= cl_image_tag @greenspace.photos[1].key %>
+      <%= cl_image_tag @greenspace.photos[2].key %>
+      <%= cl_image_tag @greenspace.photos[0].key %>
     </div>
       <div class="card-trip-infos">
         <div>
@@ -38,7 +38,7 @@
     <div class="card-trip-infos">
       <div>
         <strong><h2>Master_bacon</h2></strong>
-        <p class="pt-1">"I went there when my cat ate my homework"</p>
+        <p class="pt-1">"Bosh my abolute lord this is a great walk!"</p>
         <i class="fa-solid fa-star"></i>
         <%= @greenspace.average_rating %>
       </div>

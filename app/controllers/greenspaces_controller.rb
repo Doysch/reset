@@ -36,6 +36,6 @@ class GreenspacesController < ApplicationController
   end
 
   def greenspace_params
-    params.require(:greenspace).permit(:location, :photo, :name, :description, :average_rating)
+    params.require(:greenspace).permit(:address, :name, :description, :average_rating, photos: [])
   end
 end
