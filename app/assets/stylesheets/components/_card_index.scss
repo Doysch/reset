@@ -1,0 +1,59 @@
+.card-index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin:10px 35px;
+}
+
+.index-logo {
+  width: 30px;
+  height: auto;
+}
+
+.card-index > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-index h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-index p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-index .card-index-infos {
+  padding: 8px 8px 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color: black;
+}
+
+.card-index-rating {
+  color: black;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+// .card-index-infos .card-index-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
