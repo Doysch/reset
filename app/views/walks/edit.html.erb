@@ -1,0 +1,9 @@
+<h1>edit walk</h1>
+
+<%= @walk.stress_level_after %>
+
+<%= simple_form_for([@greenspace, @walk]) do |f| %>
+  <label class="string optional mb-3" for="stress_level_after">Rate your stress level</label>
+  <input class="form-control string optional" type="range" name="walk[stress_level_after]" min="0" max="10" step="1" name="stress_level_after" id="stress_level_after" oninput="this.nextElementSibling.value = this.value">
+  <output>5</output>
+<% end %>
