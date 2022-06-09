@@ -4,13 +4,12 @@
     <% @greenspaces.each do |greenspace| %>
       <%= link_to greenspace_path(greenspace), class: 'greenspace-card-link' do %>
         <div class="card-index">
-          <%= image_tag greenspace.photo %>
+          <%# <%= image_tag greenspace.photo %>
           <div class="card-index-infos">
             <h2><%=  greenspace.name %></h2>
-            <%# <p><%=  greenspace.location %>
-            <p>rating: <%= "⭐️" * greenspace.average_rating %></p>
-            </div>
-
+            <p><%=  greenspace.address %></p>
+            <%# <p>rating: <%= "⭐️" * greenspace.average_rating %></p>
+          </div>
           <div class="card-index-rating">
           <p class="align-items-center"><em>"<%= greenspace.description %>"</em></p>
           </div>
@@ -18,4 +17,8 @@
       <% end %>
     <% end %>
   </div>
+  <div style="width: 100%; height: 200px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
