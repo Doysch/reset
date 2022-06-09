@@ -1,35 +1,46 @@
-<h1><%= current_user.email %>'s Dashboard</h1>
+<div class="dash-background" style="background:#96BAFF"; margin-bottom: 10px>
 
-<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/robsta76" />
-<p>Reset profile</p>
+  <div>
+    <h1><%= current_user.email %>'s Dashboard</h1>
+  </div>
+  <%# I have put a placeholder avatar here for now until we sort out the username %>
+  <div class="container">
+    <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/robsta76" />
+    <p>Reset profile</p>
+  </div>
 
-<%# temp holder %>
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <div class="stats mb-3" style="height:123px; background:aqua">
-      <p>number of resets</p>
+  <%# temp holder hard-coded for now   %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="stats mb-3" style="font-size: 16px; height:130px; width: 130px; border-radius:50%; padding: 30px; background:aqua">
+          <p>number of resets: 5</p>
+        </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="stats mb-3" style="height:123px; background:lime">
-      <p>stress before reset</p>
+      <div class="col-6">
+        <div class="stats mb-3" style="margin-bottom: 3rem; font-size: 16px; height:130px; width: 130px; border-radius:50%; padding: 30px; background:red">
+          <p>stress before reset: 8</p>
+        </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="stats mb-3" style="height:123px; background:orange">
-      <p>stress after reset</p>
+      <div class="col-6">
+        <div class="stats mb-3" style="font-size: 16px; height:130px; width: 130px; border-radius:50%; padding: 30px; background:lime">
+          <p>stress after reset: 4</p>
+        </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="stats mb-3" style="height:123px; background:yellow">
-      <p>average distance covered per reset</p>
+      <div class="col-6">
+        <div class="stats mb-3" style="font-size: 16px; height:130px; width: 130px; border-radius:50%; padding: 30px; background:yellow">
+          <p>average distance 5km</p>
+        </div>
       </div>
-    </div>
-    <div class="col-12">
-      <div class="Diary mb-3" style="height:123px; background:white">
-      <p>Diary entries</p>
-
+      <%# I have hard-coded diary entries for now %>
+        <div class="col-12">
+          <div class="Diary mb-3" style="height:150px; background:silver">
+            <p>Diary entries</p>
+            <p>30th May- Ben's not around to help again!! DH! </p>
+            <p>31th May- kitt keeps pestering me to do my flashcards..arrgh!!</p>
+            <p>1st june- 901 always get more beers than 902, So unfair!!!</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
