@@ -1,8 +1,8 @@
 require "open-uri"
 
 puts "cleaning database..."
-Greenspace.destroy_all
 Walk.destroy_all
+Greenspace.destroy_all
 # User.destroy_all
 # puts "creating users"
 
