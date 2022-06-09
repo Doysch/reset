@@ -6,11 +6,12 @@
           <%= image_tag greenspace.photo %>
           <div class="card-index-infos">
             <h2><%=  greenspace.name %></h2>
-            <p><%=  greenspace.location %></p>
+            <%# <p><%=  greenspace.location %>
             <p>rating: <%= "⭐️" * greenspace.average_rating %></p>
-          </div>
+            </div>
+
           <div class="card-index-rating">
-          <%# <a href="">20m</a> %>
+          <p class="align-items-center"><em>"<%= greenspace.description %>"</em></p>
           </div>
         </div>
       <% end %>
