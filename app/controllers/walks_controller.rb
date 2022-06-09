@@ -10,6 +10,7 @@ class WalksController < ApplicationController
     @greenspace = Greenspace.find(params[:greenspace_id])
     @walk.greenspace = @greenspace
     @walk.user = current_user
+    @walk.starting_location = $postcode
     if @walk.save
       redirect_to greenspace_path(@greenspace)
     else
@@ -24,7 +25,7 @@ class WalksController < ApplicationController
   private
 
   def walk_params
-    params.require(:walk).permit(:notes, :stress_level_before, :stress_level_after, :music)
+    params.require(:walk).permit(:notes, :stress_level_before, :stress_level_after, :starting_location, :music)
   end
 
 end

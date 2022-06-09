@@ -1,9 +1,14 @@
 .card-index {
   overflow: hidden;
-  background: rgb(239, 239, 239);
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 12px;
+  border-radius: 8px;
   margin:10px 35px;
+}
+
+.index-logo {
+  width: 30px;
+  height: auto;
 }
 
 .card-index > img {
@@ -26,7 +31,7 @@
 
 
 .card-index .card-index-infos {
-  padding: 16px;
+  padding: 8px 8px 4px 8px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -34,14 +39,15 @@
   color: black;
 }
 
-// .card-index-rating {
-//   color: black;
-//   background-color: white;
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;
-// }
+.card-index-rating {
+  color: black;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
 
 
 

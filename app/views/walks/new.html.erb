@@ -26,6 +26,7 @@
 
 </form> %>
 <div class="container main-container">
+<%= image_tag 'logo.png', class:'index-logo' %>
   <div class="form-container">
     <%= simple_form_for([@greenspace, @walk]) do |f| %>
       <div class="mb-3 string optional category-stress">
@@ -44,6 +45,7 @@
 
       <div class="d-grid gap-2">
         <%= f.submit class: 'btn btn-primary fs-4' %>
+
     <% end %>
     </div>
   </div>
