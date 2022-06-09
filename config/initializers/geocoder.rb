@@ -1,5 +1,5 @@
 Geocoder.configure(
   Geocoder.configure(
-    lookup: :google
+    units: :km
   )
 )
