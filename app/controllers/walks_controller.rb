@@ -12,7 +12,7 @@ class WalksController < ApplicationController
     @walk.user = current_user
     @walk.starting_location = $postcode
     if @walk.save
-      redirect_to greenspace_path(@greenspace)
+      redirect_to greenspace_walk_path(@greenspace, @walk)
     else
       render :new, status: :unprocessable_entity
     end
