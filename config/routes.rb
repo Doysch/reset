@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get 'dashboard', to: 'pages#dashboard'
+  get 'charts', to: 'pages#charts'
   get 'devise', to: 'pages#devise'
 
   resources :greenspaces, only: %i[new create index show] do
