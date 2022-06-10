@@ -1,16 +1,18 @@
-<div class="dash-background" style="background:#96BAFF";>
+
+
+<div class="dash-background";>
 
   <div>
-    <h1><%= current_user.email %>'s Dashboard</h1>
+    <h1><%= current_user.email %>'s Charts</h1>
   </div>
   <%# I have put a placeholder avatar here for now until we sort out the username %>
-  <div class="container">
+  <div class="avatar-container">
     <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/robsta76" />
     <p>Reset profile</p>
   </div>
 
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
 
-<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+<div class="banner-content">
+    <%= image_tag 'bar chart.jpg', class:'bar-chart' %>
+</div>

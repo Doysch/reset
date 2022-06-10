@@ -1,7 +1,7 @@
 <div class="dash-background">
 
   <div>
-    <h1><%= current_user.email %>'s Dashboard</h1>
+    <h1>Rob's Dashboard</h1>
   </div>
   <%# I have put a placeholder avatar here for now until we sort out the username %>
   <div class="avatar-container">
@@ -18,13 +18,14 @@
       <p>stress before reset: 8</p>
     </div>
     <div class="stats mb-3" style="font-size: 16px; height:120px; width: 120px; border-radius:50%; padding: 20px; background:lime">
+      <%= link_to charts_path, class:"charts-link" do %>
       <p>stress after reset: 4</p>
+      <% end %>
     </div>
     <div class="stats mb-3" style="font-size: 16px; height:120px; width: 120px; border-radius:50%; padding: 20px; background:yellow">
       <p>average distance 5km</p>
     </div>
   </div>
-
   <div class="Diary mb-3" style="height:250px; background:silver">
     <p>Diary entries</p>
     <p>30th May- Ben's not around to help again!! </p>
