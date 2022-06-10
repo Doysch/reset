@@ -1,3 +1,3 @@
-Geocoder.configure(
- units: :km
-)
+  Geocoder.configure(
+    units: :km
+  )

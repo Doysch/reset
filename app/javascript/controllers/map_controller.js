@@ -5,6 +5,7 @@ export default class extends Controller {
     markers: Array
   }
   connect() {
+    console.log("hi from map controller")
     mapboxgl.accessToken = this.apiKeyValue
     this.map = new mapboxgl.Map({
       container: this.element,

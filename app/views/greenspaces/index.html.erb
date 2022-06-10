@@ -1,4 +1,4 @@
-<div class="container main-container">
+<div class="container main-container index-margin">
     <%= image_tag 'logo.png', class:'index-logo' %>
   <div class="cards">
     <% @greenspaces.each do |greenspace| %>
@@ -9,16 +9,19 @@
           <div class="card-index-infos">
             <h2><%=  greenspace.name %></h2>
             <p>rating:<%= "⭐️" * greenspace.average_rating %></p>
+              <div class="card-trip-user avatar-bordered d-flex align-items-center justify-content-center"><p>20m</p>
+              </div>
           </div>
           <div class="card-index-rating">
           <p class="align-items-center"><em>"<%= greenspace.description %>"</em></p>
           </div>
+
         </div>
       <% end %>
     <% end %>
   </div>
 
-  <div class ="mx-auto mt-5" style="width: 90%; height: 200px; border-radius: 4px;"
+  <div class ="mx-auto mt-4 mb-5" style="width: 82%; height: 200px; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 20%);"
 
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
