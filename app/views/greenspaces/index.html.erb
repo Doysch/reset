@@ -9,10 +9,13 @@
           <div class="card-index-infos">
             <h2><%=  greenspace.name %></h2>
             <p>rating:<%= "⭐️" * greenspace.average_rating %></p>
+              <div class="card-trip-user avatar-bordered d-flex align-items-center justify-content-center"><p>20m</p>
+              </div>
           </div>
           <div class="card-index-rating">
           <p class="align-items-center"><em>"<%= greenspace.description %>"</em></p>
           </div>
+
         </div>
       <% end %>
     <% end %>
