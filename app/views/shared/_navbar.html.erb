@@ -1,17 +1,33 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
   <div class="container-navbar">
-    <%# <%= link_to "#", class: "navbar-brand" do %>
-      <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <%# <% end %>
+
     <%= link_to greenspaces_path, class: "navbar-button" do %>
       <i class="fas fa-route navbar-icon"></i>
     <% end %>
     <%= link_to root_path, class: "navbar-button" do %>
       <i class="fas fa-house navbar-icon"></i>
     <% end %>
-    <%= link_to "#", class: "navbar-button" do %>
+    <%= link_to dashboard_path, class: "navbar-button" do %>
       <i class="fas fa-chart-column navbar-icon"></i>
     <% end %>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
   </div>
 </div>

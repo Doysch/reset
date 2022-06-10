@@ -22,6 +22,10 @@ class WalksController < ApplicationController
 
   end
 
+  def edit
+    @walk = Walk.find(params[:id])
+  end
+
   private
 
   def walk_params
