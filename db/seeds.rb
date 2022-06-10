@@ -31,7 +31,7 @@ greenspace1.save
 puts "created #{greenspace1.name}!!!"
 
 greenspace2 = Greenspace.create!(
-  address: "Hoxton",
+  address: "66 Old Nichol Street, London E2 7HP",
   description: "Nice park few, too many dogs",
   average_rating: 3,
   name: "Hoxton Park"
@@ -52,7 +52,7 @@ greenspace2.save
 puts "created #{greenspace2.name}!!!"
 
 greenspace3 = Greenspace.create!(
-  address: "Haggerston",
+  address: "18 Queensbridge Rd, London E2 8NS",
   description: "very peaceful and serene space",
   average_rating: 5,
   name: "Haggerston Park"

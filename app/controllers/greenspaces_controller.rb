@@ -15,6 +15,12 @@ class GreenspacesController < ApplicationController
 
   def show
     @greenspace = Greenspace.find(params[:id])
+
+    @markers = [
+      {
+        lat: @greenspace.latitude,
+        lng: @greenspace.longitude
+      }]
   end
 
   def index
@@ -22,10 +28,10 @@ class GreenspacesController < ApplicationController
     if params[:query].present?
       $postcode = params[:query]
     end
-    @markers = @greenspaces.geocoded.map do |flat|
+    @markers = @greenspaces.geocoded.map do |greenspace|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: greenspace.latitude,
+        lng: greenspace.longitude
       }
     end
   end
