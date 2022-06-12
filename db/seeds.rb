@@ -81,15 +81,59 @@ greenspace4 = Greenspace.create!(
 )
 
 file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065136/Victoria_Park11_ewljgv.jpg")
-greenspace3.photos.attach(io: file, filename: "Victoria1.jpg", content_type: "image/jpg")
-greenspace3.save
+greenspace4.photos.attach(io: file, filename: "Victoria1.jpg", content_type: "image/jpg")
+greenspace4.save
 
 file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065133/victoria-park-london-1549885053.53.2560x1440_cf9efa.jpg")
-greenspace3.photos.attach(io: file, filename: "Victoria2.jpg", content_type: "image/jpg")
-greenspace3.save
+greenspace4.photos.attach(io: file, filename: "Victoria2.jpg", content_type: "image/jpg")
+greenspace4.save
 
 file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065132/36494-victoria-park-tower-hamlets-tower-hamlets-01_vxhvw0.jpg")
-greenspace3.photos.attach(io: file, filename: "Victoria3.jpg", content_type: "image/jpg")
-greenspace3.save
+greenspace4.photos.attach(io: file, filename: "Victoria3.jpg", content_type: "image/jpg")
+greenspace4.save
 
 puts "created #{greenspace4.name}!!!"
+
+
+greenspace5 = Greenspace.create!(
+  address: "Smart St, Bethnal Green, London E2 0SN",
+  description: "Well kept green area and well away from the road ",
+  average_rating: 4,
+  name: "Meath Gardens"
+)
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065713/12dff8_59d0fc7ed631428c98823b6db516c4ce_mv2_mi9d2q.jpg")
+greenspace5.photos.attach(io: file, filename: "Meath1.jpg", content_type: "image/jpg")
+greenspace5.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065713/7759933520_1236f32c10_b_ebpytl.jpg")
+greenspace5.photos.attach(io: file, filename: "Meath2.jpg", content_type: "image/jpg")
+greenspace5.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065713/Meath_Gardens_h8jani.png")
+greenspace5.photos.attach(io: file, filename: "Meath3.jpg", content_type: "image/jpg")
+greenspace5.save
+
+puts "created #{greenspace5.name}!!!"
+
+
+greenspace6 = Greenspace.create!(
+  address: "Vallance Rd, London E2 6HD",
+  description: "Open fields and woodland walks. Tends to be busy with regular sports games being played ",
+  average_rating: 3,
+  name: "Weavers Field"
+)
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655066181/3cd00d92-d2cb-45a1-a0b3-862a18f50ffb_ybyyns.jpg")
+greenspace6.photos.attach(io: file, filename: "Weavers1.jpg", content_type: "image/jpg")
+greenspace6.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655066181/weavers-fields_rdb4k0.jpg")
+greenspace6.photos.attach(io: file, filename: "Weavers2.jpg", content_type: "image/jpg")
+greenspace6.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655066180/weavers-fields_1_oie8g3.jpg")
+greenspace6.photos.attach(io: file, filename: "Weavers3.jpg", content_type: "image/jpg")
+greenspace6.save
+
+puts "created #{greenspace6.name}!!!"
