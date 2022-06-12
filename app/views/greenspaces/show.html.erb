@@ -21,10 +21,10 @@
 
   <%#Map%>
   <%# <div class ="mx-auto mt-4 mb-5" style="border-color: hsla(231, 83%, 63%, 0.5); border-style: outset; width: 82%; height: 200px; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 20%);" %>
-  <div class="my-3" style="width: 100%; height: 300px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class=" my-3" style="width: 100%; height: 300px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <div class="d-flex align-items-end flex-column mb-3">
   <%= link_to "Next", new_greenspace_walk_path(@greenspace), class:"btn btn-search my-2" %>
