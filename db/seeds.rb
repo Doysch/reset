@@ -71,3 +71,25 @@ greenspace3.photos.attach(io: file, filename: "Haggerston3.jpg", content_type: "
 greenspace3.save
 
 puts "created #{greenspace3.name}!!!"
+
+
+greenspace4 = Greenspace.create!(
+  address: "30-31, Victoria Park, Lark Row, London E2 9JA",
+  description: "huge place with lots of paths and a lake. Can get busy in the summer",
+  average_rating: 4,
+  name: "Victoria Park"
+)
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065136/Victoria_Park11_ewljgv.jpg")
+greenspace3.photos.attach(io: file, filename: "Victoria1.jpg", content_type: "image/jpg")
+greenspace3.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065133/victoria-park-london-1549885053.53.2560x1440_cf9efa.jpg")
+greenspace3.photos.attach(io: file, filename: "Victoria2.jpg", content_type: "image/jpg")
+greenspace3.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655065132/36494-victoria-park-tower-hamlets-tower-hamlets-01_vxhvw0.jpg")
+greenspace3.photos.attach(io: file, filename: "Victoria3.jpg", content_type: "image/jpg")
+greenspace3.save
+
+puts "created #{greenspace4.name}!!!"
