@@ -1,7 +1,9 @@
 <div class="banner" style="background-image: url(<%= asset_path('home.jpg')%>">
   <div class="banner-content">
     <%= image_tag 'logo.png', class:'reset-logo' %>
+
     <h2 class="ml3">Reset your mind</h2>
+
   </div>
   <div class="search_bar">
 
@@ -9,9 +11,9 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Where from?"
+        placeholder: "Enter location"
       %>
-      <%= submit_tag "Search", class: "btn btn-search" %>
+      <%= submit_tag "Find Walks", class: "btn btn-search" %>
     <% end %>
   </div>
 </div>
