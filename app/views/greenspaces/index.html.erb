@@ -1,5 +1,6 @@
 <div class="container main-container index-margin">
     <%= image_tag 'logo.png', class:'index-logo' %>
+    <p class="align-text-center">Walks</p>
   <div class="cards">
     <% @greenspaces.each do |greenspace| %>
       <%= link_to greenspace_path(greenspace), class: 'greenspace-card-link' do %>
