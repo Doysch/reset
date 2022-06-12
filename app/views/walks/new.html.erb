@@ -26,13 +26,18 @@
 
 </form> %>
 <div class="container main-container">
-<%= image_tag 'logo.png', class:'index-logo' %>
+  <%= image_tag 'logo.png', class:'index-logo' %>
   <div class="form-container">
     <%= simple_form_for([@greenspace, @walk]) do |f| %>
       <div class="mb-3 string optional category-stress">
-        <label class="string optional mb-3" for="stress_level_before">Rate your stress level</label>
-        <input class="form-control string optional" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
-        <output>5</output>
+        <label class="string optional mb-3" for="stress_level_before">How are you feeling right now?</label>
+        <input class="form-control string optional mb-3" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
+        <%# <output>5</output> %>
+        <div class="mb-5" style="display: flex; align-items: center; justify-content: space-between;">
+          <span style='font-size:30px;'>&#128512;</span>
+          <span style='font-size:30px;'>&#128528;</span>
+          <span style='font-size:30px;'>&#128534;</span>
+        </div>
       </div>
 
       <%= f.input :music,
