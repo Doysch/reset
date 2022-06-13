@@ -10,8 +10,8 @@ class ReviewsController < ApplicationController
     @greenspace = Greenspace.find(params[:greenspace_id])
     @review.greenspace = @greenspace
     @review.user = current_user
-    if @booking.save
-      redirect_to
+    if @review.save
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
