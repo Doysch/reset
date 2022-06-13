@@ -1,5 +1,6 @@
 <div class="container main-container">
   <%= image_tag 'logo.png', class:'index-logo' %>
+  <h2 class="text-center"><%= @greenspace.name %></h2>
   <div class="card-trip">
     <%= cl_image_tag @greenspace.photos[0].key %>
       <div class="middle-images mt-2 px-2">
