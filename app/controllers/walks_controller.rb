@@ -9,6 +9,7 @@ class WalksController < ApplicationController
     @walk = Walk.new(walk_params)
     @greenspace = Greenspace.find(params[:greenspace_id])
     @walk.greenspace = @greenspace
+    @walk.starting_location = params[:query]
     @walk.user = current_user
     @walk.starting_location = $postcode
     if @walk.save

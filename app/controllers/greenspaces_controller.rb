@@ -15,12 +15,18 @@ class GreenspacesController < ApplicationController
 
   def show
     @greenspace = Greenspace.find(params[:id])
-
     @markers = [
       {
         lat: @greenspace.latitude,
         lng: @greenspace.longitude
-      }]
+      }
+    ]
+
+    if params[:query].present?
+      @search_coordinates = Geocoder.search(params[:query]).first.coordinates
+      search_marker = { lat: @search_coordinates.first, lng: @search_coordinates.last }
+      @markers << search_marker
+    end
   end
 
   def index
