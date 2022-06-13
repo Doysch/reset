@@ -41,7 +41,7 @@ class WalksController < ApplicationController
   def update
     @walk = Walk.find(params[:id])
     if @walk.update(walk_params)
-      redirect_to greenspace_walk_path(@walk.greenspace, @walk)
+      redirect_to new_greenspace_review_path(@walk.greenspace, @walk)
     else
       render :edit, status: :unprocessable_entity
     end
