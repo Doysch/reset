@@ -4,16 +4,17 @@ puts "cleaning database..."
 Walk.destroy_all
 Greenspace.destroy_all
 User.destroy_all
-
+Walk.destroy_all
+Review.destroy_all
 
 # ------------USERS---------------------#
 
 puts "creating users"
 
-user1 = User.new(email: "dave@gmail.com", password: "123456")
-user2 = User.new(email: "pilar@gmail.com", password: "123456")
-user3 = User.new(email: "rich@gmail.com", password: "123456")
-user4 = User.new(email: "rob@gmail.com", password: "123456")
+user1 = User.create!(email: "dave@gmail.com", password: "123456")
+user2 = User.create!(email: "pilar@gmail.com", password: "123456")
+user3 = User.create!(email: "rich@gmail.com", password: "123456")
+user4 = User.create!(email: "rob@gmail.com", password: "123456")
 
 puts "Users created!"
 
@@ -193,15 +194,13 @@ greenspace8.save
 
 puts "created #{greenspace8.name}!!!"
 
-
 # ------------WALKS--------------------#
 
 puts "creating walks"
 
-
 walk1 = Walk.create!(
-  user_id: 2,
-  greenspace_id: 64,
+  user_id: 7,
+  greenspace_id: 105,
   music: "music",
   notes: "Pretty sressed at work",
   stress_level_before: 9,
@@ -213,8 +212,8 @@ walk1 = Walk.create!(
 puts "created walk1 #{walk1}!"
 
 walk2 = Walk.create!(
-  user_id: 3,
-  greenspace_id: 65,
+  user_id: 8,
+  greenspace_id: 106,
   music: "music",
   notes: "Feeling down",
   stress_level_before: 7,
@@ -225,3 +224,25 @@ walk2 = Walk.create!(
 )
 
 puts "created walk2 #{walk2}!"
+
+
+# --------------REVIEWS-----------------#
+
+review1 = Review.create!(
+  user_id: 1,
+  greenspace_id: 89,
+  rating: 3.5,
+  content: "What a great walk. Made me feel a whole lot better"
+)
+
+puts "created review1 #{review1}!"
+
+
+review2 = Review.create!(
+  user_id: 2,
+  greenspace_id: 90,
+  rating: 4,
+  content: "What a great walk. Made me feel a whole lot better"
+)
+
+puts "created review2 #{review2}!"
