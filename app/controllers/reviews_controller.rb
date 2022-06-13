@@ -20,7 +20,6 @@ class ReviewsController < ApplicationController
     @review = Review(params[:id])
   end
 
-
   def update
     @review = Review.find(params[:id])
     @review.update(review_params)
