@@ -2,7 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    markers: Array,
+    search: Array
   }
   connect() {
     console.log("hi from map controller")
@@ -13,6 +14,8 @@ export default class extends Controller {
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
+    this.#getRoute([this.markersValue[0].lng, this.markersValue[0].lat])
+
   }
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
@@ -21,10 +24,52 @@ export default class extends Controller {
   }
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      console.log(marker)
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)
     })
   }
+
+  async #getRoute(end) {
+    // make a directions request using cycling profile
+    // an arbitrary start will always be the same
+    // only the end or destination will change
+    const query = await fetch(
+      `https://api.mapbox.com/directions/v5/mapbox/walking/${this.searchValue[1]},${this.searchValue[0]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${this.apiKeyValue}`,
+      { method: 'GET' }
+    );
+    const json = await query.json();
+    console.log(json)
+    const data = json.routes[0];
+    const route = data.geometry.coordinates;
+    const geojson = {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: route
+      }
+    };
+    // if the route already exists on the map, we'll reset it using setData
+
+    this.map.addLayer({
+      id: 'route',
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data: geojson
+      },
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round'
+      },
+      paint: {
+        'line-color': '#3887be',
+        'line-width': 5,
+        'line-opacity': 0.75
+      }
+    });
+    // add turn instructions here at the end
+  }
+
 }

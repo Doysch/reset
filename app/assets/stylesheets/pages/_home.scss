@@ -23,22 +23,23 @@
 }
 
 .banner h2 {
-  margin: 60px;
-  color: rgb(242, 238, 241);
-  text-shadow: 5px 5px 10px rgba(9, 9, 9, 0.2);
-  font-family: monospace;
-  font-size: 32px;
-  font-weight: bold;
+  margin: 13px;
+  // color: #afc1da;
+  text-shadow: 5px 5px 10px #1a191975;
+  font-family:'Bad Script', 'Montserrat Alternates', sans-serif;
+  font-size: 45px;
+  // font-weight: bold;
   text-align: center;
+  color: rgb(231, 223, 223);
+  -webkit-text-fill-color: #000000b3; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #355cdd99;
 }
+
 
 .search_bar{
   display: flex;
   margin-bottom: 10px;
-}
-
-.search-form-control {
-
 }
 
 .search-form-control .form-control {
@@ -53,4 +54,9 @@
   border: 1px solid #1EDD88;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
 }

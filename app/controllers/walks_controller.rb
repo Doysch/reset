@@ -9,6 +9,7 @@ class WalksController < ApplicationController
     @walk = Walk.new(walk_params)
     @greenspace = Greenspace.find(params[:greenspace_id])
     @walk.greenspace = @greenspace
+    @walk.starting_location = params[:query]
     @walk.user = current_user
     @walk.starting_location = $postcode
     if @walk.save
@@ -24,6 +25,15 @@ class WalksController < ApplicationController
 
   def edit
     @walk = Walk.find(params[:id])
+  end
+
+  def update
+    @walk = Walk.find(params[:id])
+    if @walk.update(walk_params)
+      redirect_to greenspace_walk_path(@walk.greenspace, @walk)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

@@ -1,5 +1,5 @@
 .card-trip {
-  overflow: hidden;
+  overflow: scroll;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
@@ -7,7 +7,7 @@
   i {
     color: gold;
   }
-  margin:10px 35px;
+  margin:10px 5px;//35px;
 
 }
 
