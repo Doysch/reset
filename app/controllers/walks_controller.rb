@@ -20,7 +20,18 @@ class WalksController < ApplicationController
   end
 
   def show
+    @walk = Walk.find(params[:id])
+    @markers = [
+      {
+        lat: @walk.greenspace.latitude,
+        lng: @walk.greenspace.longitude
+      },
+      {
+        lat: @walk.latitude,
+        lng: @walk.longitude
+      }
 
+    ]
   end
 
   def edit
