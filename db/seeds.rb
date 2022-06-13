@@ -58,15 +58,15 @@ greenspace3 = Greenspace.create!(
   name: "Haggerston Park"
 )
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788136/greenspace2a_aqy0bl.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655101509/haggerston-park_itxsox.jpg")
 greenspace3.photos.attach(io: file, filename: "Haggerston1.jpg", content_type: "image/jpg")
 greenspace3.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654792516/thomas-le-fQZaLU1mudM-unsplash_syjjpu.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655101510/Haggerston_Park_-_panoramio_spmvpe.jpg")
 greenspace3.photos.attach(io: file, filename: "Haggerston2.jpg", content_type: "image/jpg")
 greenspace3.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654792557/amy-tran-HafDeUhr_T4-unsplash_zdnjbi.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655101509/2373196547_1aef5215a9_b_k7bwzs.jpg")
 greenspace3.photos.attach(io: file, filename: "Haggerston3.jpg", content_type: "image/jpg")
 greenspace3.save
 
