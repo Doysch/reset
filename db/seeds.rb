@@ -11,10 +11,10 @@ Review.destroy_all
 
 puts "creating users"
 
-user1 = User.create!(email: "dave@gmail.com", password: "123456")
-user2 = User.create!(email: "pilar@gmail.com", password: "123456")
-user3 = User.create!(email: "rich@gmail.com", password: "123456")
-user4 = User.create!(email: "rob@gmail.com", password: "123456")
+user1 = User.create!(email: "dave@gmail.com", password: "123456", username: "Davey-boy")
+user2 = User.create!(email: "pilar@gmail.com", password: "123456", username: "PSanchez")
+user3 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrich")
+user4 = User.create!(email: "rob@gmail.com", password: "123456", username: "Robsta")
 
 puts "Users created!"
 
@@ -231,18 +231,44 @@ puts "created walk2 #{walk2}!"
 review1 = Review.create!(
   user_id: 1,
   greenspace_id: 1,
-  rating: 3.5,
+  rating: 4,
   content: "What a great walk. Made me feel a whole lot better"
 )
 
 puts "created review1 #{review1}!"
 
-
 review2 = Review.create!(
   user_id: 2,
-  greenspace_id: 2,
-  rating: 4,
-  content: "What a great walk. Made me feel a whole lot better"
+  greenspace_id: 1,
+  rating: 5,
+  content: "This was so peaceful.It really reset my day and managed to be very productive afterwards"
 )
 
 puts "created review2 #{review2}!"
+
+review3 = Review.create!(
+  user_id: 2,
+  greenspace_id: 1,
+  rating: 2,
+  content: "It was quite busy and difficult to be mindful on this walk. There were quite a few dogs too. "
+)
+
+puts "created review3 #{review3}!"
+
+review4 = Review.create!(
+  user_id: 3,
+  greenspace_id: 2,
+  rating: 4,
+  content: "The walk was serene. So great to be in a greenspace"
+)
+
+puts "created review4 #{review4}!"
+
+review5 = Review.create!(
+  user_id: 4,
+  greenspace_id: 2,
+  rating: 4,
+  content: "There are many paths to choose from and it really did make my day!"
+)
+
+puts "created review5 #{review5}!"
