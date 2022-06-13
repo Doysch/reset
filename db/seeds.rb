@@ -86,7 +86,7 @@ puts "created #{greenspace3.name}!!!"
 
 
 greenspace4 = Greenspace.create!(
-  address: "30-31, Victoria Park, Lark Row, London E2 9JA",
+  address: "362 Old Ford Rd, London E9 7DE",
   description: "huge place with lots of paths and a lake. Can get busy in the summer",
   average_rating: 4,
   name: "Victoria Park"
@@ -199,8 +199,8 @@ puts "created #{greenspace8.name}!!!"
 puts "creating walks"
 
 walk1 = Walk.create!(
-  user_id: 7,
-  greenspace_id: 105,
+  user_id: 1,
+  greenspace_id: 1,
   music: "music",
   notes: "Pretty sressed at work",
   stress_level_before: 9,
@@ -212,8 +212,8 @@ walk1 = Walk.create!(
 puts "created walk1 #{walk1}!"
 
 walk2 = Walk.create!(
-  user_id: 8,
-  greenspace_id: 106,
+  user_id: 2,
+  greenspace_id: 2,
   music: "music",
   notes: "Feeling down",
   stress_level_before: 7,
@@ -230,7 +230,7 @@ puts "created walk2 #{walk2}!"
 
 review1 = Review.create!(
   user_id: 1,
-  greenspace_id: 89,
+  greenspace_id: 1,
   rating: 3.5,
   content: "What a great walk. Made me feel a whole lot better"
 )
@@ -240,7 +240,7 @@ puts "created review1 #{review1}!"
 
 review2 = Review.create!(
   user_id: 2,
-  greenspace_id: 90,
+  greenspace_id: 2,
   rating: 4,
   content: "What a great walk. Made me feel a whole lot better"
 )
