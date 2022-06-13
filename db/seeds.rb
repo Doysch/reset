@@ -23,7 +23,7 @@ puts "Users created!"
 puts "creating greenspaces"
 greenspace1 = Greenspace.create!(
   address: "5 Hoxton Square, London N1 6NU",
-  description: "Clean and quiet green space",
+  description: "is one of Hackney's largest parks at 7.1 hectares. It is well used and holds a Green Flag award - given annually to the best parks in the country.",
   average_rating: 4.5,
   name: "Shoreditch Park"
 )
@@ -44,7 +44,7 @@ puts "created #{greenspace1.name}!!!"
 
 greenspace2 = Greenspace.create!(
   address: "66 Old Nichol Street, London E2 7HP",
-  description: "It's as green as you would expect and it's a fairly plain space but with lots of room. It does get busy in summer",
+  description: "...a traditional London garden square in Shoreditch's fashionable cultural quarter. The square is a much appreciated green space for residents, workers and visitors alike in a densely urbanised area.",
   average_rating: 3,
   name: "Hoxton Square"
 )
@@ -65,7 +65,7 @@ puts "created #{greenspace2.name}!!!"
 
 greenspace3 = Greenspace.create!(
   address: "18 Queensbridge Rd, London E2 8NS",
-  description: "very peaceful and serene space",
+  description: "it contains a small but luxuriant nature reserve and is very popular with dog walkers, families and the occasional hipster. Next to it is a woodland walkway and it backs onto Hackney City Farm.",
   average_rating: 5,
   name: "Haggerston Park"
 )
@@ -87,7 +87,7 @@ puts "created #{greenspace3.name}!!!"
 
 greenspace4 = Greenspace.create!(
   address: "362 Old Ford Rd, London E9 7DE",
-  description: "huge place with lots of paths and a lake. Can get busy in the summer",
+  description: "It is the largest park in Tower Hamlets and one of London's most visited green spaces with approximately 9m visitors every year.The park spans 86.18 hectares of open space.",
   average_rating: 4,
   name: "Victoria Park"
 )
@@ -109,7 +109,7 @@ puts "created #{greenspace4.name}!!!"
 
 greenspace5 = Greenspace.create!(
   address: "Smart St, Bethnal Green, London E2 0SN",
-  description: "Well kept green area and well away from the road ",
+  description: "Meath Gardens is a jewel of a park that is still one of London's best kept secrets. Set back from Roman Road, it is often overlooked for better known green spaces in East London. ",
   average_rating: 4,
   name: "Meath Gardens"
 )
@@ -131,7 +131,7 @@ puts "created #{greenspace5.name}!!!"
 
 greenspace6 = Greenspace.create!(
   address: "Vallance Rd, London E2 6HD",
-  description: "Open fields and woodland walks. Tends to be busy with regular sports games being played ",
+  description: "Weavers Fields is the largest open space in the west of the borough. It is very popular with families and has a wide range of facilities and lots of routes for walking. ",
   average_rating: 3,
   name: "Weavers Field"
 )
