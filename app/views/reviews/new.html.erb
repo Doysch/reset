@@ -1,0 +1,16 @@
+
+<div class="container main-container">
+  <%= image_tag 'logo.png', class:'index-logo' %>
+  <div class="form-container">
+    <h1 style="font-family: Roboto;">Leave a review for <%= @greenspace.name %> </h1>
+
+    <%= simple_form_for([@greenspace, @review]) do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, input_html: { type: 'number', min: '0', max: '5', value: '0', step:'1' } %>
+      <div class="d-grid gap-2">
+      <%= f.submit class: 'btn btn-primary fs-4' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
