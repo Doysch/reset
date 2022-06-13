@@ -1,32 +1,15 @@
 <div class="container main-container">
   <div>
-  <%= image_tag 'logo.png', class:'logo-walk-show' %>
+  <%= image_tag 'logo.png', class:'logo-walk-show mx-4 mb-5 my-5' %>
   </div>
-  <div>
-  <%= image_tag 'maproute.png', class:'maproute' %>
+  <div class=" my-3 mt-5" style="width: 100%; height: 300px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-search-value="<%= @search_coordinates.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-  <div class="btn-show">
-  <%= link_to 'Start now', edit_greenspace_walk_path, class:"btn btn-gradient" %>
+
+  <div class="d-grid gap-2">
+  <%= link_to 'Begin my reset', edit_greenspace_walk_path, class:"btn btn-search mb-5 my-5 mx-5" %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-<%#
- <div id="map"></div>
-
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoia28wbGs0dDEiLCJhIjoiY2wzZDN4aTNrMDA0azNjbDBham03YnlodSJ9.dLi-qnAJxCgRncDTZ6yLiQ';
-    const map = new mapboxgl.Map({
-      container: 'map', // Specify the container ID
-      style: 'mapbox://styles/mapbox/light-v10', // Specify which map style to use
-      center: [-84.5, 38.05], // Specify the starting position [lng, lat]
-      zoom: 11 // Specify the starting zoom
-    });
-  </script> %>
