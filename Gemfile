@@ -36,6 +36,9 @@ gem "geocoder"
 
 gem "dotenv-rails", groups: [:development, :test]
 
+#charts.js
+gem "chartjs-ror"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
