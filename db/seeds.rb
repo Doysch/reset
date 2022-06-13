@@ -16,15 +16,15 @@ greenspace1 = Greenspace.create!(
   name: "Shoreditch Park"
 )
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654786206/vosqyuq9jd0ve892czxh.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098571/Shoreditch-Park_irycmi.webp")
 greenspace1.photos.attach(io: file, filename: "Shoreditchpark1.jpg", content_type: "image/jpg")
 greenspace1.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788093/greenspace1c_ziwnii.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098572/Boulder-and-Hoxton-Press-towers_deegay.jpg")
 greenspace1.photos.attach(io: file, filename: "Shoreditchpark2.jpg", content_type: "image/jpg")
 greenspace1.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788093/greenspace1a_kdiwyq.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098570/dscn2831_tsauzy.jpg")
 greenspace1.photos.attach(io: file, filename: "Shoreditchpark3.jpg", content_type: "image/jpg")
 greenspace1.save
 
@@ -32,20 +32,20 @@ puts "created #{greenspace1.name}!!!"
 
 greenspace2 = Greenspace.create!(
   address: "66 Old Nichol Street, London E2 7HP",
-  description: "Nice park few, too many dogs",
+  description: "It's as green as you would expect and it's a fairly plain space but with lots of room. It does get busy in summer",
   average_rating: 3,
-  name: "Hoxton Park"
+  name: "Hoxton Square"
 )
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788098/greenspace1b_rubiad.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098810/thomas-le-fQZaLU1mudM-unsplash_lwiwj1.jpg")
 greenspace2.photos.attach(io: file, filename: "Shoreditchpark1.jpg", content_type: "image/jpg")
 greenspace2.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788133/greenspace2b_t41qny.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098815/i-do-nothing-but-love-vqP7v7CPWMk-unsplash_dr1xfv.jpg")
 greenspace2.photos.attach(io: file, filename: "HoxtonPark2.jpg", content_type: "image/jpg")
 greenspace2.save
 
-file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1654788133/greenspace2c_nln336.jpg")
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098957/rs_w_1280_f2mgs3.jpg")
 greenspace2.photos.attach(io: file, filename: "HoxtonPark3.jpg", content_type: "image/jpg")
 greenspace2.save
 
@@ -137,3 +137,47 @@ greenspace6.photos.attach(io: file, filename: "Weavers3.jpg", content_type: "ima
 greenspace6.save
 
 puts "created #{greenspace6.name}!!!"
+
+
+greenspace7 = Greenspace.create!(
+  address: "7c Rhoda St, London E2 7EF",
+  description: "Open fields and woodland walks. Tends to be busy with regular sports games being played ",
+  average_rating: 3,
+  name: "East Shoreditch Park "
+)
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655099371/dscn2823_gkx4l1.jpg")
+greenspace7.photos.attach(io: file, filename: "EastShoreditch1.jpg", content_type: "image/jpg")
+greenspace7.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655099371/hoxton-press-07-sm_ifnby4.jpg")
+greenspace7.photos.attach(io: file, filename: "EastShoreditch2.jpg", content_type: "image/jpg")
+greenspace7.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655098815/i-do-nothing-but-love-vqP7v7CPWMk-unsplash_dr1xfv.jpg")
+greenspace7.photos.attach(io: file, filename: "EastShoreditch3.jpg", content_type: "image/jpg")
+greenspace7.save
+
+puts "created #{greenspace7.name}!!!"
+
+
+greenspace8 = Greenspace.create!(
+  address: "Buxton St, London E1 5AR",
+  description: "Small city farm",
+  average_rating: 3,
+  name: "Spitalfields City Farm "
+)
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655099848/20180905204121-2f938673-me_lyfse7.jpg")
+greenspace8.photos.attach(io: file, filename: "EastShoreditch1.jpg", content_type: "image/jpg")
+greenspace8.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655099848/image_oitfqy.jpg")
+greenspace8.photos.attach(io: file, filename: "EastShoreditch2.jpg", content_type: "image/jpg")
+greenspace8.save
+
+file = URI.open("https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655099848/Farm-from-Shop_fi3wfr.jpg")
+greenspace8.photos.attach(io: file, filename: "EastShoreditch3.jpg", content_type: "image/jpg")
+greenspace8.save
+
+puts "created #{greenspace8.name}!!!"
