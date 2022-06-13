@@ -17,7 +17,7 @@ const lineChart = new Chart(ctx, {
         },
         {
           label: 'Level of stress after walk',
-          data: [6, 5, 6, 7, 6],
+          data: [7, 5, 8, 7, 7],
           backgroundColor: [
             'rgba(151,187,205,0.2)'
           ],

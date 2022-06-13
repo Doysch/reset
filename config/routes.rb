@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'charts', to: 'pages#charts'
   get 'devise', to: 'pages#devise'
+  get 'diary', to: 'pages#diary'
 
   resources :greenspaces, only: %i[new create index show] do
     resources :walks, only: %i[new create show edit update]
