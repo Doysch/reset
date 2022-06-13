@@ -5,7 +5,7 @@ showStories();
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", function (e) {
   let addTxt = document.getElementById("addTxt");
-  let stories = .getItem("stories");
+  let stories = localStorage.getItem("stories");
   if (stories == null) {
     storiesObj = [];
   } else {
