@@ -11,10 +11,10 @@ Review.destroy_all
 
 puts "creating users"
 
-user1 = User.create!(email: "dave@gmail.com", password: "123456")
-user2 = User.create!(email: "pilar@gmail.com", password: "123456")
-user3 = User.create!(email: "rich@gmail.com", password: "123456")
-user4 = User.create!(email: "rob@gmail.com", password: "123456")
+user1 = User.create!(email: "dave@gmail.com", password: "123456", username: "Davey-boy")
+user2 = User.create!(email: "pilar@gmail.com", password: "123456", username: "PSanchez")
+user3 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrich")
+user4 = User.create!(email: "rob@gmail.com", password: "123456", username: "Robsta")
 
 puts "Users created!"
 
@@ -236,7 +236,6 @@ review1 = Review.create!(
 )
 
 puts "created review1 #{review1}!"
-
 
 review2 = Review.create!(
   user_id: 2,
