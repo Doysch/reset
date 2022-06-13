@@ -5,12 +5,14 @@
     <h2 style="font-family: Roboto;">Leave a review for <%= @greenspace.name... %></h2>
 
     <%= simple_form_for([@greenspace, @review]) do |f| %>
+    <div class="form-input">
       <%= f.input :content %>
-      <%= f.input :rating, input_html: { type: 'number', min: '0', max: '5', value: '0', step:'1' } %>
+      <%= f.input :rating, input_html: { type: 'number', min: '0', max: '5', value: '0' } %>
       <div class="d-grid gap-2">
       <%= f.submit class: 'btn btn-primary fs-4 mb-3' %>
       </div>
     <% end %>
+
     <hr>
     <h2 style="font-family: Roboto;">Or skip to your dashboard</h2>
     <div class="d-grid gap-2">
