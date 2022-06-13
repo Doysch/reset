@@ -3,10 +3,21 @@ require "open-uri"
 puts "cleaning database..."
 Walk.destroy_all
 Greenspace.destroy_all
-# User.destroy_all
-# puts "creating users"
+User.destroy_all
 
-# User.new(email: "dave@gmail.com", password: "123456")
+
+# ------------USERS---------------------#
+
+puts "creating users"
+
+user1 = User.new(email: "dave@gmail.com", password: "123456")
+user2 = User.new(email: "pilar@gmail.com", password: "123456")
+user3 = User.new(email: "rich@gmail.com", password: "123456")
+user4 = User.new(email: "rob@gmail.com", password: "123456")
+
+puts "Users created!"
+
+# ------------GREENSPACES---------------------#
 
 puts "creating greenspaces"
 greenspace1 = Greenspace.create!(
@@ -181,3 +192,36 @@ greenspace8.photos.attach(io: file, filename: "EastShoreditch3.jpg", content_typ
 greenspace8.save
 
 puts "created #{greenspace8.name}!!!"
+
+
+# ------------WALKS--------------------#
+
+puts "creating walks"
+
+
+walk1 = Walk.create!(
+  user_id: 2,
+  greenspace_id: 64,
+  music: "music",
+  notes: "Pretty sressed at work",
+  stress_level_before: 9,
+  stress_level_after: 6,
+  starting_location: "138 Kingsland Rd, London E2 8DY",
+  latitude: 51.53116,
+  longitude: -0.07682
+)
+puts "created walk1 #{walk1}!"
+
+walk2 = Walk.create!(
+  user_id: 3,
+  greenspace_id: 65,
+  music: "music",
+  notes: "Feeling down",
+  stress_level_before: 7,
+  stress_level_after: 5,
+  starting_location: "Purcell St, London N1 6RD",
+  latitude: 51.53292,
+  longitude: 0.08186
+)
+
+puts "created walk2 #{walk2}!"
