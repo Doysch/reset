@@ -1,7 +1,6 @@
 <div class="banner" style="background-image: url(<%= asset_path('home.jpg')%>">
   <div class="banner-content">
     <%= image_tag 'logo.png', class:'reset-logo' %>
-
     <h2 class="ml3">Reset your mind</h2>
     <%# <p class="ml3">Take a walk</p>
     <p class="ml3">Where are you?</p> %>
@@ -10,19 +9,19 @@
       by taking a mindful walk through greenspaces
       listening to music or meditation</p>
     </div>
-
   </div>
-  <div class="search_bar">
 
-    <%= form_tag greenspaces_path, method: :get, class: "d-flex" do %>
+  <div class="search_bar">
+    <div data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
+    <%= form_tag greenspaces_path, method: :get, class: "" do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control d-none",
         placeholder: "Enter location",
-        input_html: {data: {address_autocomplete_target: "address"}},
-        wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+        data: {target: "address-autocomplete.address"}
       %>
       <%= submit_tag "Find Walks", class: "btn btn-search" %>
     <% end %>
+    </div>
   </div>
 </div>
