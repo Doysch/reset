@@ -17,8 +17,6 @@ gem "puma", "~> 5.0"
 
 gem 'geocoder'
 
-gem "dotenv-rails", groups: [:development, :test]
-
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
@@ -31,8 +29,6 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-
-gem "geocoder"
 
 gem "dotenv-rails", groups: [:development, :test]
 
