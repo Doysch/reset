@@ -9,7 +9,8 @@
               <div class="card-index-infos">
                 <h2><%=  greenspace.name %></h2>
                 <p>rating: <%= "⭐️" * greenspace.average_rating %></p>
-                  <div class="card-trip-user avatar-bordered d-flex align-items-center justify-content-center"><p> <%= greenspace.distance %>minutes away</p>
+                  <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
+                  <p> <%= greenspace.distance %> mins walk</p>
                   </div>
               </div>
           <div class="card-index-rating">
