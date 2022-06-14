@@ -1,6 +1,7 @@
 <div class="container main-container">
   <%= image_tag 'logo.png', class:'index-logo' %>
   <h2 class="text-center"><%= @greenspace.name %></h2>
+
   <div class="card-trip">
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -18,38 +19,36 @@
     </div>
 
 
-    <div class="middle-images mt-2 px-2">
+    <div class="middle-images mt-4 px-2">
       <%= cl_image_tag @greenspace.photos[0].key %>
       <%= cl_image_tag @greenspace.photos[1].key %>
       <%= cl_image_tag @greenspace.photos[2].key %>
     </div>
 
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= @greenspace.name %></h2>
-          <p class="pt-2 pb-2"><%= @greenspace.description %></p>
-          <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
-          <% if @show_distance_calcs %>
-            <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
-            <p>Time: <%= @greenspace.distance %> mins </p>
-          <% end %>
-        </div>
-        <h2 class="card-trip-pricing"></h2>
 
+
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @greenspace.name %></h2>
+        <p class="pt-2 pb-2"><%= @greenspace.description %></p>
+        <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
+        <% if @show_distance_calcs %>
+          <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
+          <p>Time: <%= @greenspace.distance %> mins </p>
+        <% end %>
       </div>
-      <h2 class="card-trip-pricing"></h2>
     </div>
+
 
   </div>
 
+
   <%#Map%>
-  <%# <div class ="mx-auto mt-4 mb-5" style="border-color: hsla(231, 83%, 63%, 0.5); border-style: outset; width: 82%; height: 200px; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 20%);" %>
   <div class=" my-3 mt-3" style="width: 100%; height: 300px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-search-value="<%= @search_coordinates.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" id="walk-calculator">
-
   </div>
 
   <%# <div class="d-flex align-items-end flex-column mb-3"> %>
@@ -61,7 +60,7 @@
   <%#  Reviews %>
   <div class="mb-5 ">
     <strong><h2 class="text-center my-4">Reviews</h2></strong>
-      <%  @greenspace.reviews.each do |review| %>
+      <% @greenspace.reviews.each do |review| %>
         <div class="card-trip mt-2 mb-4">
           <div class="card-trip-infos">
             <div>
@@ -73,6 +72,7 @@
         </div>
       <% end %>
   </div>
+
 </div>
 
 
@@ -82,26 +82,26 @@
 
 
 
-   <%# <div class="card-trip mt-2 mb-4">
-    <div class="card-trip-infos">
-      <div>
-        <strong><h2>Master_bacon</h2></strong>
-        <p class="pt-1">"Bosh my abolute lord this is a great walk!"</p>
-        <i class="fa-solid fa-star"></i>
-        <%= @greenspace.average_rating %>
-      <%# </div>
-      <h2 class="card-trip-pricing"></h2>
-    </div>
-  </div> %>
+<%# <div class="card-trip mt-2 mb-4">
+<div class="card-trip-infos">
+    <div>
+      <strong><h2>Master_bacon</h2></strong>
+      <p class="pt-1">"Bosh my abolute lord this is a great walk!"</p>
+      <i class="fa-solid fa-star"></i>
+      <%= @greenspace.average_rating %>
+    <%# </div>
+    <h2 class="card-trip-pricing"></h2>
+  </div>
+</div> %>
 
-  <%# <div class="card-trip mt-2">
-    <div class="card-trip-infos">
-      <div>
-        <strong><h2>Pilar_shreds</h2></strong>
-        <p class="pt-1">"I found this park and I've been going to it for 2 weeks now, good vibes!"</p>
-        <i class="fa-solid fa-star"></i>
-        <%= @greenspace.average_rating %>
-      <%# </div>
-      <h2 class="card-trip-pricing"></h2>
-    </div>
-  </div>  %>
+<%# <div class="card-trip mt-2">
+  <div class="card-trip-infos">
+    <div>
+      <strong><h2>Pilar_shreds</h2></strong>
+      <p class="pt-1">"I found this park and I've been going to it for 2 weeks now, good vibes!"</p>
+      <i class="fa-solid fa-star"></i>
+      <%= @greenspace.average_rating %>
+    <%# </div>
+    <h2 class="card-trip-pricing"></h2>
+  </div>
+</div>  %>
