@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: url(<%= asset_path('home.jpg')%>">
   <div class="banner-content">
     <%= image_tag 'logo.png', class:'reset-logo' %>
-    <h2 class="ml3">Finding happiness through greenspaces</h2>
+    <%# <h2 class="">Finding happiness through greenspaces</h2> %>
     <%# <p class="ml3">Take a walk</p>
     <p class="ml3">Where are you?</p> %>
     <%# <div class="container" style="color:white;padding:40px 40px 0px 40px; background-color: grey; opacity: 0.6;">
@@ -9,14 +9,21 @@
       by taking a mindful walk through greenspaces
       listening to music or meditation</p>
     </div> %>
-    <h2 class="ml3">Take a walk</h2>
+
+    <div style="height: 200px; padding: 100px 0 0 0; opacity: 0.6">
+  <div class="card">
+    <h3 class="card__title">Take a walk</h2>
+    <div class="card__content">Get away from your day-to-day stresses and walk mindfully to greenspaces</div>
+  </div>
+<%# </div>
+    <h2 class="">Take a walk</h2>
     <p style="color:white;padding:40px 40px 0px 40px;">Get away from your day-to-day stresses and walk mindfully to greenspaces</p>
-    <h2 class="ml3">Find your space</h2>
+    <h2 class="">Find your space</h2>
     <p style="color:white;padding:40px 40px 0px 40px;">Search below to find a greenspace near you</p>
 
-  </div>
+  </div> %>
 
-  <div class="search_bar">
+  <div class="search_bar mt-5">
     <div data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
     <%= form_tag greenspaces_path, method: :get, class: "" do %>
       <%= text_field_tag :query,
