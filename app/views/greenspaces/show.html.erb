@@ -13,8 +13,10 @@
           <h2><%= @greenspace.name %></h2>
           <p class="pt-2 pb-2"><%= @greenspace.description %></p>
           <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
-          <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
-          <p>Time: <%= @greenspace.distance %> mins </p>
+          <% if @show_distance_calcs %>
+            <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
+            <p>Time: <%= @greenspace.distance %> mins </p>
+          <% end %>
         </div>
         <h2 class="card-trip-pricing"></h2>
       </div>

@@ -23,6 +23,7 @@ class GreenspacesController < ApplicationController
     ]
 
     if params[:query].present?
+      @show_distance_calcs = true
       @search_coordinates = Geocoder.search(params[:query]).first.coordinates
       search_marker = { lat: @search_coordinates.first, lng: @search_coordinates.last }
       @markers << search_marker
