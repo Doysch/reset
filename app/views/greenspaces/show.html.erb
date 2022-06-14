@@ -30,7 +30,7 @@
     <div class="card-trip-infos">
       <div>
         <h2><%= @greenspace.name %></h2>
-        <p class="pt-2 pb-2"><%= @greenspace.description %></p>
+        <p class="pt-2 pb-2" style="font-size:14px;"><%= @greenspace.description %></p>
         <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
         <% if @show_distance_calcs %>
           <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
@@ -66,6 +66,7 @@
             <div>
               <h2 class="my-auto"><strong> <%= review.user.username %></strong> </h2>
               <p class="pt-1">" <%= review.content %>"</p>
+              <p class="pt-1"><%= review.created_at.strftime("Reviewed on %d/%m/%Y at %H:%M")   %></p>
               <p> <%= "⭐️" * review.rating  %> </p>
             </div>
           </div>
