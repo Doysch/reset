@@ -26,6 +26,11 @@ class GreenspacesController < ApplicationController
       @search_coordinates = Geocoder.search(params[:query]).first.coordinates
       search_marker = { lat: @search_coordinates.first, lng: @search_coordinates.last }
       @markers << search_marker
+      @starting_coords = Geocoder.search(params[:query]).first.coordinates
+      distance_in_miles = Geocoder::Calculations.distance_between(@starting_coords, [@greenspace.latitude, @greenspace.longitude])
+      @greenspace.distance_for_index = distance_in_miles
+      time = (distance_in_miles * 20).round
+      @greenspace.distance = time
 
     end
   end
