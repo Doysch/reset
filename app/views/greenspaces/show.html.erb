@@ -29,7 +29,7 @@
 
     <div class="card-trip-infos">
       <div>
-        <h2><%= @greenspace.name %></h2>
+        <h2 class="text-center"><%= @greenspace.name %></h2>
         <p class="pt-2 pb-2" style="font-size:14px;"><%= @greenspace.description %></p>
         <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
         <% if @show_distance_calcs %>
