@@ -1,5 +1,4 @@
 <div class="banner" style="background-image: url('https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655225173/reset_autumn_sibjt1.jpg')">
-<%# <div class="banner" style="background-color:purple;"> %>
   <div class="banner-content">
     <%= image_tag 'logo.png', class:'reset-logo' %>
     <h3 style="color:white;">take a walk</h3>
@@ -7,31 +6,21 @@
     <h3 style="color:white;">space</h3>
 
     <%# <h2 class="ml3">Finding happiness through greenspaces</h2> %>
-    <%# <p class="ml3">Take a walk</p>
-    <p class="ml3">Where are you?</p> %>
-    <%# <div class="container" style="color:white;padding:40px 40px 0px 40px; background-color: grey; opacity: 0.6;">
-      <p>Take care of your mental health<br>
-      by taking a mindful walk through greenspaces
-      listening to music or meditation</p>
-    </div> %>
-    <%# <h2 class="ml3">Take a walk</h2>
-    <p style="color:white;padding:40px 40px 0px 40px;">Get away from your day-to-day stresses and walk mindfully to greenspaces</p>
-    <h2 class="ml3">Find your space</h2>
-    <p style="color:white;padding:40px 40px 0px 40px;">Search below to find a greenspace near you</p> %>
-
+   
+    
   </div>
 
   <div class="search_bar">
-    <div class ="d-flex flex-row-reverse align-items-center" data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
-      <%= form_tag greenspaces_path, method: :get, class: "" do %>
+    <div data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
+    <%= form_tag greenspaces_path, method: :get, class: "" do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control d-none",
         placeholder: "Enter location",
         data: {target: "address-autocomplete.address"}
       %>
-      <%= submit_tag "Find Walks", class: "btn btn-search", style: "padding: 12px 12px; font-weight: bold" %>
-      <% end %>
+      <%= submit_tag "Find Walks", class: "btn btn-search" %>
+    <% end %>
     </div>
   </div>
 </div>
