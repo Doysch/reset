@@ -1,9 +1,9 @@
 
 <div class="container main-container">
   <%= image_tag 'logo.png', class:'index-logo' %>
-  <div class="form-container">
-    <h2 style="font-family: Roboto;">Leave a review for <%= @greenspace.name... %></h2>
+  <h3 class="mb-2 mt-4 text-center" >Leave a review for <%= @greenspace.name... %></h3>
 
+  <div class="form-container">
     <%= simple_form_for([@greenspace, @review]) do |f| %>
     <div class="form-input">
       <%= f.input :content, :label => 'Review', :placeholder => '...' %>
@@ -15,7 +15,7 @@
       <% end %>
     </div>
     <hr>
-    <h2 style="font-family: Roboto;">Or skip to your dashboard</h2>
+    <h3 class="text-center" >...or skip to your dashboard</h3>
     <div class="d-grid gap-2">
       <%= link_to "My dashboard", dashboard_path, class:"btn btn-primary fs-4 mt-3" %>
     </div>
