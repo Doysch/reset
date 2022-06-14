@@ -3,7 +3,7 @@
 
   <div class="container-navbar">
 
-    <%= link_to greenspaces_path, class: "navbar-button" do %>
+    <%= link_to greenspaces_path(query: params[:query]), class: "navbar-button" do %>
       <i class="fas fa-route navbar-icon"></i>
     <% end %>
     <%= link_to root_path, class: "navbar-button" do %>

@@ -33,7 +33,8 @@ gem "jbuilder"
 gem "dotenv-rails", groups: [:development, :test]
 
 #charts.js
-gem "chartjs-ror"
+# gem "chartjs-ror"
+gem "chartkick"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

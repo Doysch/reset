@@ -1,3 +1,3 @@
 module ApplicationHelper
-  Chartjs.no_conflict!
+  # Chartjs.no_conflict!
 end

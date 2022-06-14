@@ -23,8 +23,8 @@
 
 .logo img{
   height: 50px;
-  width: auto;
-  margin-bottom: 20px;
+  width: 50px;
+  margin-bottom: 0px;
 }
 
 .search {
@@ -53,11 +53,20 @@
 
 .user {
   position: relative;
-  width: 50px;
-  height: 50px;
-  margin-left: 50px;
-  margin-bottom: 40px;
-  border-radius: 50%;
+  width: 53px;
+      height:55px;
+      border-top-left-radius: 50% 50%;
+      border-top-right-radius: 50% 50%;
+      border-bottom-right-radius: 50% 50%;
+      border-bottom-left-radius: 50% 50%;
+      border: 2px solid #CCC;
+      margin-bottom: 2px;
+      margin-left: 220px;
+}
+
+.user i{
+  margin: 10px;
+  margin-right: 5px;
 }
 
 /* Main section */
@@ -76,6 +85,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 }
 
 .cards .card{
@@ -98,6 +108,7 @@
 .card-name{
   color: #888;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .icon-box i{
@@ -112,9 +123,10 @@
 
 .chart{
   padding: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+  border: 1px #48d1cc;
 }
 
 .chart h2{
@@ -122,6 +134,15 @@
   font-size: 20px;
   color: #666;
   text-align: center;
+}
+
+.line-chart{
+  padding: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+  border: 1px #48d1cc;
+  padding-top: 20px;
 }
 
 /* responsiveness */

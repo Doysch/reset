@@ -5,11 +5,9 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
   end
 
   def devise
-
   end
 
 end
