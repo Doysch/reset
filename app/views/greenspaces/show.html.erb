@@ -2,23 +2,40 @@
   <%= image_tag 'logo.png', class:'index-logo' %>
   <h2 class="text-center"><%= @greenspace.name %></h2>
   <div class="card-trip">
-    <%= cl_image_tag @greenspace.photos[0].key %>
-      <div class="middle-images mt-2 px-2">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag @greenspace.photos[0].key, class:"d-block w-100" %>
+        </div>
+        <div class="carousel-item">
+          <%= cl_image_tag @greenspace.photos[1].key, class:"d-block w-100" %>
+        </div>
+        <div class="carousel-item">
+          <%= cl_image_tag @greenspace.photos[2].key, class:"d-block w-100" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="middle-images mt-2 px-2">
+      <%= cl_image_tag @greenspace.photos[0].key %>
       <%= cl_image_tag @greenspace.photos[1].key %>
       <%= cl_image_tag @greenspace.photos[2].key %>
-      <%= cl_image_tag @greenspace.photos[0].key %>
     </div>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= @greenspace.name %></h2>
-          <p class="pt-2 pb-2"><%= @greenspace.description %></p>
-          <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
-          <p>Distance: 1km</p>
-        </div>
-        <h2 class="card-trip-pricing"></h2>
-      </div>
-  </div>
 
+
+    <div class="card-trip-infos mt-3">
+      <div>
+        <h2><%= @greenspace.name %></h2>
+        <p class="pt-2 pb-2"><%= @greenspace.description %></p>
+        <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
+        <p>Distance: 1km</p>
+      </div>
+      <h2 class="card-trip-pricing"></h2>
+    </div>
+
+  </div>
 
   <%#Map%>
   <%# <div class ="mx-auto mt-4 mb-5" style="border-color: hsla(231, 83%, 63%, 0.5); border-style: outset; width: 82%; height: 200px; border-radius: 10px; box-shadow: 0 0 15px rgb(0 0 0 / 20%);" %>
