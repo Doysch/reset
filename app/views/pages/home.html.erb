@@ -12,16 +12,16 @@
   </div>
 
   <div class="search_bar">
-    <div data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
-    <%= form_tag greenspaces_path, method: :get, class: "" do %>
+    <div class ="d-flex flex-row-reverse align-items-center" data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
+      <%= form_tag greenspaces_path, method: :get, class: "" do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control d-none",
         placeholder: "Enter location",
         data: {target: "address-autocomplete.address"}
       %>
-      <%= submit_tag "Find Walks", class: "btn btn-search" %>
-    <% end %>
+      <%= submit_tag "Find Walks", class: "btn btn-search", style: "padding: 12px 12px; font-weight: bold" %>
+      <% end %>
     </div>
   </div>
 </div>
