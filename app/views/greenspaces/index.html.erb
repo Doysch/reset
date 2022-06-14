@@ -1,4 +1,4 @@
-<div class="container main-container index-margin">
+<div class="container main-container">
   <%= image_tag 'logo.png', class:'index-logo' %>
   <h2 class="text-center">Walks</h2>
     <div class="cards">
@@ -21,9 +21,11 @@
     <% end %>
   </div>
 
-  <div class="my-3" style="width: 100%; height: 300px"
+  <div class="my-3 mb-5" style="width: 100%; height: 300px"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+
+<%# Class removed from main container => index-margin %>
