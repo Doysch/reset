@@ -5,7 +5,7 @@
   <div class="card-trip">
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner role="listbox" style=" width:100%; height: 200px !important;">
         <div class="carousel-item active">
           <%= cl_image_tag @greenspace.photos[0].key, class:"d-block w-100" %>
         </div>
@@ -19,7 +19,7 @@
     </div>
 
 
-    <div class="middle-images mt-4 px-2">
+    <div class="middle-images mt-2 mx-2">
       <%= cl_image_tag @greenspace.photos[0].key %>
       <%= cl_image_tag @greenspace.photos[1].key %>
       <%= cl_image_tag @greenspace.photos[2].key %>
