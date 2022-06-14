@@ -1,5 +1,5 @@
 class Greenspace < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   has_many_attached :photos
 
   attr_accessor :distance, :distance_for_index
