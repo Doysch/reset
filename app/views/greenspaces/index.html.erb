@@ -8,10 +8,10 @@
             <%= cl_image_tag greenspace.photos[0].key %>
               <div class="card-index-infos">
                 <h2><%=  greenspace.name %></h2>
-                <p>rating: <%= "⭐️" * greenspace.average_rating %></p>
-                  <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
+                <p style="text-align: end; padding-right: 10px;"><%= "⭐️" * greenspace.average_rating %></p>
+                <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
                   <p> <%= greenspace.distance %> mins walk</p>
-                  </div>
+                </div>
               </div>
           <div class="card-index-rating">
             <p class="align-items-center px-3 py-2"><em>"<%= greenspace.description %>"</em></p>
