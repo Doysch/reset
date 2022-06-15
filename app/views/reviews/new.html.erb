@@ -10,14 +10,14 @@
       <%= f.input :rating, :collection => 1..5, :hint => 'Give your rating from 1 to 5 stars' %>
        <%# # :input_html => { :type => 'number', min: '0', max: '5', value: '0' } %>
       <div class="d-grid gap-2">
-      <%= f.submit class: 'btn btn-primary fs-4 mb-3' %>
+      <%= f.submit class: 'btn btn-primary fs-4 mb-3 rounded-corners' %>
       </div>
       <% end %>
     </div>
     <hr>
     <h3 class="text-center" >...or skip to your dashboard</h3>
     <div class="d-grid gap-2">
-      <%= link_to "My dashboard", dashboard_path, class:"btn btn-primary fs-4 mt-3" %>
+      <%= link_to "My dashboard", dashboard_path, class:"btn btn-primary fs-4 mt-3 rounded-corners" %>
     </div>
 
   </div>

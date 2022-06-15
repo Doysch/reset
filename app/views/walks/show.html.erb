@@ -1,8 +1,9 @@
-<div class="container main-container index-margin">
+<div class="container main-container">
   <div>
     <%= image_tag 'logo.png', class:'index-logo' %>
   </div>
-  <div class=" my-3 mt-3" style="width: 100%; height: 580px;"
+  <div class=" my-3 mt-3" style="width: 100%; height: 450px;"
+    <%# 580px;" %>
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-search-value="<%= [@walk.latitude, @walk.longitude].to_json %>"
@@ -21,6 +22,6 @@
      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5pDpKXDZXe97W5nPVRQo8A?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
   <%  end%>
    <div class="d-grid gap-2">
-    <%=  link_to "Finish walk", edit_greenspace_walk_path, class:"btn btn-primary fs-4 my-3" %>
+    <%=  link_to "Finish walk", edit_greenspace_walk_path, class:"btn btn-primary fs-4 my-3 rounded-corners" %>
    </div>
 </div>

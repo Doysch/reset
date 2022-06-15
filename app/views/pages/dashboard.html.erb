@@ -1,69 +1,62 @@
 
-  <div class="container">
-    <div class = "topbar">
-      <div class="logo">
-          <%= image_tag 'logo.png', class:'reset-logo' %>
-      </div>
-        <div class="user">
-          <i class="fa-solid fa-user-tie"></i>
-        </div>
-      </div>
-    <div class="" style="height: 70px;"></div>
-    <div class="">
-      <div class="cards-dashboard">
-        <div class="card">
-          <div class="card-content">
-            <div class="number">5</div>
-            <div class="card-name">Total number of Resets</div>
-          </div>
-          <div class="icon-box">
-            <!-- <i class="fas fa-user"> needs changing -->
-            </i>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">7</div>
-            <div class="card-name">Average Stress Level</div>
-          </div>
-          <div class="icon-box">
-            <!-- <i class="fas fa-user"> needs changing -->
-            </i>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">5</div>
-            <div class="card-name"> Greenspace Reviews</div>
-          </div>
-          <div class="icon-box">
-            <i class="fa-solid fa-book-user"></i>
-            </i>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">5</div>
-              <div class="card-name">Diary Entries</div>
-            </div>
-          <div class="icon-box">
-            <i class="fa-solid fa-notebook"></i>
-            </i>
-        </div>
-      </div>
+  <div class = "topbar">
+    <div class="logo">
+      <%= image_tag 'logo.png', class:'reset-logo' %>
     </div>
-      <div class="charts">
-        <div class="chart">
-          <h2>Stress Level before walk</h2>
-          <%= bar_chart({january: 4, february: 7, March: 9, April: 5}) %>
-        </div>
-        <div class="line-chart">
-          <h2>Stress Level before and after walk</h2>
-          <%= line_chart [{name: "initial stress level", data: {"30 May": 8, "31 May": 9, "1 June": 7, "2 June": 8, "3 June": 8 }, colors: ["#ff6347", "#48d1cc"]},
-          {name: "post stress level", data: {"30 May": 6, "31 May": 5, "1 June": 7, "2 June": 7, "3 June": 5 }}] %>
-        </div>
+      <h2>Data Analysis</h2>
+    <div class="user">
+      <i class="fa-solid fa-user-tie"></i>
+    </div>
+  </div>
+
+  <div class="" style="height: 70px;"></div>
+
+  <div class="cards-dashboard">
+    <div class="card">
+      <div class="card-content">
+        <div class="number">5</div>
+        <div class="card-name">Total number of Resets</div>
+      </div>
+      <div class="icon-box">
 
       </div>
     </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="number">7</div>
+        <div class="card-name">Average Stress Level</div>
+      </div>
+
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="number">5</div>
+        <div class="card-name"> Greenspace Reviews</div>
+      </div>
+      <div class="icon-box">
+        <i class="fa-solid fa-book-user"></i>
+      </div>
+    </div>
+    <%= link_to diary_path, class: "card-name" do %>
+      <div class="card">
+        <div class="card-content">
+          <div class="number">5</div>
+          <div class="card-name">Diary Entries</div>
+          <div class="icon-box">
+            <i class="fa-solid fa-notebook"></i>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="" style="height: 85px;"></div>
+    <div class="charts">
+      <div class="pie-chart">
+        <h2>Music vs Meditation</h2>
+        <%= pie_chart({music: 3, meditation: 2}) %>
+      </div>
+  <div class="line-chart">
+    <h2>Stress Level before and after walk</h2>
+    <%= line_chart [{name: "initial stress level", data: {"30 May": 8, "31 May": 9, "1 June": 7, "2 June": 8, "3 June": 8 }, color: ["purple"]},
+    {name: "post stress level", data: {"30 May": 6, "31 May": 5, "1 June": 7, "2 June": 7, "3 June": 5 }, color: ["#81C803"]}] %>
+  </div>
+<div class="" style="height: 85px;"></div>

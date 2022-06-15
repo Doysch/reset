@@ -202,7 +202,7 @@ walk1 = Walk.create!(
   user_id: 1,
   greenspace_id: 1,
   music: "music",
-  notes: "Pretty sressed at work",
+  notes: "Pretty sressed at work. Felt better after the walk",
   stress_level_before: 9,
   stress_level_after: 6,
   starting_location: "138 Kingsland Rd, London E2 8DY",
@@ -212,7 +212,7 @@ walk1 = Walk.create!(
 puts "created walk1 #{walk1}!"
 
 walk2 = Walk.create!(
-  user_id: 2,
+  user_id: 1,
   greenspace_id: 2,
   music: "music",
   notes: "Feeling down",
@@ -224,6 +224,48 @@ walk2 = Walk.create!(
 )
 
 puts "created walk2 #{walk2}!"
+
+walk3 = Walk.create!(
+  user_id: 1,
+  greenspace_id: 1,
+  music: "meditation",
+  notes: "Feeling worse but had a really nice walk. The sun was shining and helped",
+  stress_level_before: 9,
+  stress_level_after: 5,
+  starting_location: "Purcell St, London N1 6RD",
+  latitude: 51.53292,
+  longitude: 0.08186
+)
+
+puts "created walk3 #{walk3}!"
+
+walk4 = Walk.create!(
+  user_id: 1,
+  greenspace_id: 2,
+  music: "music",
+  notes: "Feeling down again. walk help a little but still low.",
+  stress_level_before: 8,
+  stress_level_after: 7,
+  starting_location: "Purcell St, London N1 6RD",
+  latitude: 51.53292,
+  longitude: 0.08186
+)
+
+puts "created walk4 #{walk4}!"
+
+walk5 = Walk.create!(
+  user_id: 1,
+  greenspace_id: 2,
+  music: "meditation",
+  notes: "Feeling down but the weekend is here now",
+  stress_level_before: 7,
+  stress_level_after: 5,
+  starting_location: "Purcell St, London N1 6RD",
+  latitude: 51.53292,
+  longitude: 0.08186
+)
+
+puts "created walk5 #{walk5}!"
 
 
 # --------------REVIEWS-----------------#
