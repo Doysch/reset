@@ -2,7 +2,7 @@
 /* search bar, logo and profile icon styling */
 * {
   padding: 0;
-  margin: 0;
+  margin: 2px;
   box-sizing: border-box;
   font-family:sans-serif;
 }
@@ -65,7 +65,7 @@
 
 .cards-dashboard{
   width: 100%;
-  padding: 35px 0;
+  padding: 8px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
@@ -73,7 +73,7 @@
 }
 
 .cards-dashboard .card{
-  padding: 20px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,6 +93,7 @@
   color: #888;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
 }
 
 .icon-box i{
@@ -107,7 +108,7 @@
 
 .chart{
   padding: #fff;
-  padding: 30px;
+  padding: 50px;
   border-radius: 10px;
   box-shadow: 0px 3px 15px rgba(88, 88, 88, 0.2);
   border: 1px #48d1cc;
@@ -135,9 +136,9 @@
   box-shadow: 0 7px 25px;
   border: 1px #48d1cc;
   border-radius: 15px;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0px 3px 15px rgba(88, 88, 88, 0.2);
-  background: #fff
+  background: #fff;
 }
 
 /* responsiveness */
