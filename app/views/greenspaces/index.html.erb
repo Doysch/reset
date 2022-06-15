@@ -1,6 +1,6 @@
 <div class="container main-container">
   <%= image_tag 'logo.png', class:'index-logo' %>
-  <h2 class="text-center">Walks</h2>
+  <h2 class="text-center">Find your space</h2>
     <div class="cards">
       <% @greenspaces.each do |greenspace| %>
         <%= link_to greenspace_path(greenspace, query: params[:query]), class: 'greenspace-card-link' do %>
