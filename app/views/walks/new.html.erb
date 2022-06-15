@@ -31,7 +31,7 @@
     <%= simple_form_for([@greenspace, @walk]) do |f| %>
       <div class="mb-3 string optional category-stress">
         <label class="string optional mb-3" for="stress_level_before">How are you feeling now?</label>
-        <input class="form-control string optional mb-3" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
+        <input class="form-control string optional mb-3 rounded-corners" type="range" name="walk[stress_level_before]" min="0" max="10" step="1" name="stress_level_before" id="stress_level_before" oninput="this.nextElementSibling.value = this.value">
         <%# <output>5</output> %>
         <div class="mb-3" style="display: flex; align-items: center; justify-content: space-between;">
           <span style='font-size:30px;'>&#128534;</span>
