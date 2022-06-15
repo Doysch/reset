@@ -11,6 +11,7 @@ class WalksController < ApplicationController
     @walk.greenspace = @greenspace
     @walk.starting_location = params[:query]
     @walk.user = current_user
+    @walk.stress_level_after = 0
     @walk.starting_location = $postcode
     if @walk.save
       redirect_to greenspace_walk_path(@greenspace, @walk)
