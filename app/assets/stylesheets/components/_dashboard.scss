@@ -71,6 +71,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
 }
 
 .cards-dashboard .card{
@@ -140,6 +141,8 @@
   padding: 50px;
   box-shadow: 0px 3px 15px rgba(88, 88, 88, 0.2);
   background: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* responsiveness */
