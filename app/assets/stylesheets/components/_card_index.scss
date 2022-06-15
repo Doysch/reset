@@ -21,6 +21,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .card-index p {
@@ -32,9 +33,9 @@
 
 .card-index .card-index-infos {
   padding: 14px 8px 4px 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
   position: relative;
   color: black;
 }
@@ -45,24 +46,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
+// .card-index-infos h6 {
+//   text-align: end;
+//   padding-right: 10px;
+//   padding-top: 5px;
+// }
 
 
 .card-trip-user {
   position: absolute;
   right: 3px;
-  top: -196px;
+  top: -197px;
   // width: 40px;
-  background-color: #F3F6F7;
+  background-color: #f3f6f7d6;
   color: black;
 }
 
 .card-trip-user p {
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: nunito;
 }
 
 

@@ -8,18 +8,25 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 24px 100px;
+  padding: 40px 26px 100px;
+  .btn-search {
+    border-radius: 0 4px 4px 0;
+    background-color: #e2cd61db;
+    font-family: nunito;
+
+  }
 }
 
 .reset-logo{
-  width: 150px;
-  margin: 0 auto;
+  width: 120px;
+  margin: 0 auto 112px;
 }
 .banner-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .banner h2 {
@@ -39,7 +46,7 @@
 
 .search_bar{
   // display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .search-form-control .form-control {
@@ -71,4 +78,41 @@
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.mapboxgl-ctrl-geocoder {
+  min-width: unset;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.mapboxgl-ctrl-geocoder--input:placeholder {
+  color: red !important;
+}
+
+.suggestions {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  .active a {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  // background-color: red !important;
+  }
+}
+
+.mapboxgl-ctrl-geocoder--button, .mapboxgl-ctrl-geocoder--icon-close {
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-geocoder--icon {
+  fill: #000;
+}
+
+.description-homepage {
+  margin-top: 0;
+  padding: 0px 45px;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 20px;
+  font-family: nunito;
+  font-style: italic;
 }
