@@ -21,6 +21,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .card-index p {
@@ -32,9 +33,9 @@
 
 .card-index .card-index-infos {
   padding: 14px 8px 4px 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
   position: relative;
   color: black;
 }
@@ -45,10 +46,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
+// .card-index-infos h6 {
+//   text-align: end;
+//   padding-right: 10px;
+//   padding-top: 5px;
+// }
 
 
 .card-trip-user {
