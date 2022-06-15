@@ -56,7 +56,6 @@
       </div>
   <div class="line-chart">
     <h2>Stress Level before and after walk</h2>
-    @walk_stress_levels
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
     <%# line_chart [{name: "initial stress level", data: {"30 May": 8, "31 May": 9, "1 June": 7, "2 June": 8, "3 June": 8 }, color: ["purple"]},
     {name: "post stress level", data: {"30 May": 6, "31 May": 5, "1 June": 7, "2 June": 7, "3 June": 5 }, color: ["#81C803"]}] %>
