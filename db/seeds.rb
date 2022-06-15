@@ -208,6 +208,7 @@ walk1 = Walk.create!(
   starting_location: "138 Kingsland Rd, London E2 8DY",
   latitude: 51.53116,
   longitude: -0.07682,
+  updated_at: Date.new(2022, 6, 13)
 )
   # updated_at: Mon, 13 June 2022
 
@@ -223,7 +224,7 @@ walk2 = Walk.create!(
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
   longitude: 0.08186,
-  updated_at: 14/06/2022,
+  updated_at: Date.new(2022, 6, 14)
 
 )
 
@@ -239,7 +240,7 @@ walk3 = Walk.create!(
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
   longitude: 0.08186,
-  updated_at: 13/06/2022,
+  updated_at: Date.new(2022, 6, 15)
 
 )
 
@@ -255,7 +256,7 @@ walk4 = Walk.create!(
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
   longitude: 0.08186,
-  updated_at: 16/06/2022,
+  updated_at: Date.new(2022, 6, 15)
 
 )
 
@@ -271,7 +272,7 @@ walk5 = Walk.create!(
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
   longitude: 0.08186,
-  updated_at: 17/06/2022,
+  updated_at: Date.new(2022, 6, 17)
 
 )
 
