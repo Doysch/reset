@@ -199,70 +199,80 @@ puts "created #{greenspace8.name}!!!"
 puts "creating walks"
 
 walk1 = Walk.create!(
-  user_id: 1,
-  greenspace_id: 1,
+  user_id: user1.id,
+  greenspace_id: greenspace1.id,
   music: "music",
   notes: "Pretty sressed at work. Felt better after the walk",
   stress_level_before: 9,
   stress_level_after: 6,
   starting_location: "138 Kingsland Rd, London E2 8DY",
   latitude: 51.53116,
-  longitude: -0.07682
+  longitude: -0.07682,
 )
+  # updated_at: Mon, 13 June 2022
+
 puts "created walk1 #{walk1}!"
 
 walk2 = Walk.create!(
-  user_id: 1,
-  greenspace_id: 2,
+  user_id: user1.id,
+  greenspace_id: greenspace2.id,
   music: "music",
   notes: "Feeling down",
   stress_level_before: 7,
   stress_level_after: 5,
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
-  longitude: 0.08186
+  longitude: 0.08186,
+  updated_at: 14/06/2022,
+
 )
 
 puts "created walk2 #{walk2}!"
 
 walk3 = Walk.create!(
-  user_id: 1,
-  greenspace_id: 1,
+  user_id: user1.id,
+  greenspace_id: greenspace1.id,
   music: "meditation",
   notes: "Feeling worse but had a really nice walk. The sun was shining and helped",
   stress_level_before: 9,
   stress_level_after: 5,
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
-  longitude: 0.08186
+  longitude: 0.08186,
+  updated_at: 13/06/2022,
+
 )
 
 puts "created walk3 #{walk3}!"
 
 walk4 = Walk.create!(
-  user_id: 1,
-  greenspace_id: 2,
+  user_id: user1.id,
+  greenspace_id: greenspace2.id,
   music: "music",
   notes: "Feeling down again. walk help a little but still low.",
   stress_level_before: 8,
   stress_level_after: 7,
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
-  longitude: 0.08186
+  longitude: 0.08186,
+  updated_at: 16/06/2022,
+
 )
 
 puts "created walk4 #{walk4}!"
 
 walk5 = Walk.create!(
-  user_id: 1,
-  greenspace_id: 2,
+  user_id: user1.id,
+  greenspace_id: greenspace2.id,
   music: "meditation",
   notes: "Feeling down but the weekend is here now",
   stress_level_before: 7,
   stress_level_after: 5,
   starting_location: "Purcell St, London N1 6RD",
   latitude: 51.53292,
-  longitude: 0.08186
+  longitude: 0.08186,
+  updated_at: 17/06/2022,
+
 )
 
 puts "created walk5 #{walk5}!"
@@ -271,8 +281,8 @@ puts "created walk5 #{walk5}!"
 # --------------REVIEWS-----------------#
 
 review1 = Review.create!(
-  user_id: 1,
-  greenspace_id: 1,
+  user_id: user1.id,
+  greenspace_id: greenspace1.id,
   rating: 4,
   content: "What a great walk. Made me feel a whole lot better"
 )
@@ -280,8 +290,8 @@ review1 = Review.create!(
 puts "created review1 #{review1}!"
 
 review2 = Review.create!(
-  user_id: 2,
-  greenspace_id: 1,
+  user_id: user2.id,
+  greenspace_id: greenspace1.id,
   rating: 5,
   content: "This was so peaceful.It really reset my day and managed to be very productive afterwards"
 )
@@ -289,8 +299,8 @@ review2 = Review.create!(
 puts "created review2 #{review2}!"
 
 review3 = Review.create!(
-  user_id: 2,
-  greenspace_id: 1,
+  user_id: user2.id,
+  greenspace_id: greenspace1.id,
   rating: 2,
   content: "It was quite busy and difficult to be mindful on this walk. There were quite a few dogs too. "
 )
@@ -298,8 +308,8 @@ review3 = Review.create!(
 puts "created review3 #{review3}!"
 
 review4 = Review.create!(
-  user_id: 3,
-  greenspace_id: 2,
+  user_id: user3.id,
+  greenspace_id: greenspace2.id,
   rating: 4,
   content: "The walk was serene. So great to be in a greenspace"
 )
@@ -307,8 +317,8 @@ review4 = Review.create!(
 puts "created review4 #{review4}!"
 
 review5 = Review.create!(
-  user_id: 4,
-  greenspace_id: 2,
+  user_id: user4.id,
+  greenspace_id: greenspace2.id,
   rating: 4,
   content: "There are many paths to choose from and it really did make my day!"
 )
