@@ -1,8 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background:#96BAFF;
-  background: rgb(124,131,253);
-  background: linear-gradient(90deg, rgba(124,131,253,1) 0%, rgba(150,186,255,1) 50%, rgba(125,237,255,1) 100%);
+  // background:#96BAFF;
+  // background: rgb(124,131,253);
+  // background: linear-gradient(90deg, rgba(124,131,253,1) 0%, rgba(150,186,255,1) 50%, rgba(125,237,255,1) 100%);
+  background: linear-gradient(90deg, #BB9981 0%, #C5D8A4 100%, #C5D8A4 50%);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -11,7 +12,7 @@
 }
 .navbar-lewagon2 {
   justify-content: space-between;
-  background:#96BAFF;
+  // background:#96BAFF;
 
 }
 
