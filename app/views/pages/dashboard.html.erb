@@ -1,11 +1,12 @@
 
-  <div class = "topbar margin-dashboard">
+  <div class = "topbar" style="display: flex; justify-content: space-between">
     <div class="logo">
       <%= image_tag 'logo.png', class:'reset-logo' %>
     </div>
       <h2>Dashboard</h2>
-    <div class="user">
-      <i class="fa-solid fa-user-tie"></i>
+
+    <div>
+      <%= image_tag current_user.photo, class:"avatar" %>
     </div>
   </div>
 
