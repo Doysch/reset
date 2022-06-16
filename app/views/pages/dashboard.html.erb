@@ -1,25 +1,30 @@
 
-  <div class = "topbar margin-dashboard">
+  <div class = "topbar" style="display: flex; justify-content: space-between">
     <div class="logo">
       <%= image_tag 'logo.png', class:'reset-logo' %>
     </div>
-      <h2>Dashboard</h2>
-    <div class="user">
-      <i class="fa-solid fa-user-tie"></i>
+      <h3><%=current_user.username %>'s space</h3>
+
+    <div>
+      <%= image_tag current_user.photo, class:"avatar" %>
     </div>
   </div>
 
   <div class="" style="height: 70px;"></div>
 
   <div class="line-chart">
-    <h3>Stress level before and after walk</h3>
+
+    <h2 style="font-size: 18px;">Stress levels before and after walk</h2>
+
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
   </div>
 
 
       <div class="pie-chart">
-        <h3>Music vs Meditation</h3>
+
+        <h3 style="text-align: center;">Music vs Meditation</h3>
         <%= pie_chart @music_meditation, colors: ["purple", "#81C803"] %>
+
       </div>
 
   <div class="cards-dashboard">
