@@ -201,7 +201,7 @@ puts "creating walks"
 walk1 = Walk.create!(
   user_id: user1.id,
   greenspace_id: greenspace1.id,
-  music: "music",
+  music: "Music",
   notes: "Pretty sressed at work. Felt better after the walk",
   stress_level_before: 9,
   stress_level_after: 6,
@@ -217,7 +217,7 @@ puts "created walk1 #{walk1}!"
 walk2 = Walk.create!(
   user_id: user1.id,
   greenspace_id: greenspace2.id,
-  music: "music",
+  music: "Music",
   notes: "Feeling down",
   stress_level_before: 7,
   stress_level_after: 5,
@@ -233,7 +233,7 @@ puts "created walk2 #{walk2}!"
 walk3 = Walk.create!(
   user_id: user1.id,
   greenspace_id: greenspace1.id,
-  music: "meditation",
+  music: "Meditation",
   notes: "Feeling worse but had a really nice walk. The sun was shining and helped",
   stress_level_before: 9,
   stress_level_after: 5,
@@ -249,7 +249,7 @@ puts "created walk3 #{walk3}!"
 walk4 = Walk.create!(
   user_id: user1.id,
   greenspace_id: greenspace2.id,
-  music: "music",
+  music: "Music",
   notes: "Feeling down again. walk help a little but still low.",
   stress_level_before: 8,
   stress_level_after: 7,
@@ -265,7 +265,7 @@ puts "created walk4 #{walk4}!"
 walk5 = Walk.create!(
   user_id: user1.id,
   greenspace_id: greenspace2.id,
-  music: "meditation",
+  music: "Meditation",
   notes: "Feeling down but the weekend is here now",
   stress_level_before: 7,
   stress_level_after: 5,
