@@ -22,7 +22,7 @@ puts "Users created!"
 
 puts "creating greenspaces"
 greenspace1 = Greenspace.create!(
-  address: "5 Hoxton Square, London N1 6NU",
+  address: "188 New N Rd, London N1 6TA",
   description: "is one of Hackney's largest parks at 7.1 hectares. It is well used and holds a Green Flag award - given annually to the best parks in the country.",
   average_rating: 4.5,
   name: "Shoreditch Park"
