@@ -282,7 +282,7 @@ puts "created walk5 #{walk5}!"
 # --------------REVIEWS-----------------#
 
 review1 = Review.create!(
-  user_id: user1.id,
+  user_id: user2.id,
   greenspace_id: greenspace1.id,
   rating: 4,
   content: "What a great walk. Made me feel a whole lot better"
@@ -291,8 +291,8 @@ review1 = Review.create!(
 puts "created review1 #{review1}!"
 
 review2 = Review.create!(
-  user_id: user2.id,
-  greenspace_id: greenspace3.id,
+  user_id: user3.id,
+  greenspace_id: greenspace1.id,
   rating: 5,
   content: "This was so peaceful.It really reset my day and managed to be very productive afterwards"
 )
@@ -300,10 +300,10 @@ review2 = Review.create!(
 puts "created review2 #{review2}!"
 
 review3 = Review.create!(
-  user_id: user2.id,
+  user_id: user4.id,
   greenspace_id: greenspace1.id,
-  rating: 2,
-  content: "It was quite busy and difficult to be mindful on this walk. There were quite a few dogs too. "
+  rating: 4,
+  content: "The walk was serene. So great to be in a greenspace"
 )
 
 puts "created review3 #{review3}!"
@@ -311,8 +311,8 @@ puts "created review3 #{review3}!"
 review4 = Review.create!(
   user_id: user3.id,
   greenspace_id: greenspace3.id,
-  rating: 4,
-  content: "The walk was serene. So great to be in a greenspace"
+  rating: 2,
+  content: "It was quite busy and difficult to be mindful on this walk. There were quite a few dogs too"
 )
 
 puts "created review4 #{review4}!"
@@ -321,7 +321,7 @@ review5 = Review.create!(
   user_id: user4.id,
   greenspace_id: greenspace3.id,
   rating: 5,
-  content: "There are many paths to choose from and it really did make my day."
+  content: "There are many paths to choose from and it really did make my day"
 )
 
 puts "created review5 #{review5}!"
