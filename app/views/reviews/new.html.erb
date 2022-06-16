@@ -6,7 +6,7 @@
   <div class="form-container">
     <%= simple_form_for([@greenspace, @review]) do |f| %>
     <div class="form-input">
-      <%= f.input :content, :label => 'Review', :placeholder => '...' %>
+      <%= f.input :content, :label => 'How did this walk make you feel?', :placeholder => '...' %>
       <%= f.input :rating, :collection => 1..5, :hint => 'Give your rating from 1 to 5 stars' %>
        <%# # :input_html => { :type => 'number', min: '0', max: '5', value: '0' } %>
       <div class="d-grid gap-2">
