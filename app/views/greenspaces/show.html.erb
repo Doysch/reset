@@ -30,11 +30,11 @@
     <div class="card-trip-infos">
       <div>
         <h2 class="text-center"><%= @greenspace.name %></h2>
-        <p class="pt-2 pb-2" style="font-size:14px;"><%= @greenspace.description %></p>
-        <p class="pb-2">Rating: <%= "⭐️" * @greenspace.average_rating %></p>
+        <p class="pt-2 pb-2" style="font-size:15px;"><%= @greenspace.description %></p>
+        <%# <p class="pb-2"><%= "⭐️" * @greenspace.average_rating</p> %>
         <% if @show_distance_calcs %>
-          <p>Distance: <%= @greenspace.distance_for_index.round(1) %> miles </p>
-          <p>Time: <%= @greenspace.distance %> mins </p>
+          <p><strong>Distance:</strong> <%= @greenspace.distance_for_index.round(1) %> miles </p>
+          <p><strong>Time:</strong> <%= @greenspace.distance %> mins </p>
         <% end %>
       </div>
     </div>

@@ -1,5 +1,5 @@
 
-  <div class = "topbar">
+  <div class = "topbar margin-dashboard">
     <div class="logo">
       <%= image_tag 'logo.png', class:'reset-logo' %>
     </div>
@@ -16,12 +16,11 @@
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
   </div>
 
-    <div class="charts">
+
       <div class="pie-chart">
         <h2>Music vs Meditation</h2>
         <%= pie_chart({music: 3, meditation: 2}) %>
       </div>
-    </div>
 
   <div class="cards-dashboard">
     <div class="card">
@@ -53,4 +52,7 @@
       </div>
     <% end %>
   </div>
-<div class="" style="height: 85px;"></div>
+
+    <%# <div class="charts"> %>
+<%# <div class="" style="height: 85px;"></div> %>
+
