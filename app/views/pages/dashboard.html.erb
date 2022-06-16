@@ -16,11 +16,11 @@
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
   </div>
 
+
       <div class="pie-chart">
         <h2>Music vs Meditation</h2>
         <%= pie_chart({music: 3, meditation: 2}) %>
       </div>
-
 
   <div class="cards-dashboard">
     <div class="card">
@@ -29,6 +29,7 @@
         <div class="card-name">Total number of Resets</div>
       </div>
     </div>
+
     <div class="card">
       <div class="card-content">
         <div class="number">7</div>
@@ -51,5 +52,7 @@
       </div>
     <% end %>
   </div>
+
     <%# <div class="charts"> %>
 <%# <div class="" style="height: 85px;"></div> %>
+
