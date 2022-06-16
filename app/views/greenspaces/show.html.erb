@@ -66,16 +66,16 @@
             <div>
               <div style="display: inline-block;"><h2 style="float: left;"><strong><%= review.user.username %></div> </strong><div style="float:right;"><%= image_tag review.user.photo, class:"avatar" %></h2></div>
                 <div>
-                  <p class="pt-1">" <%= review.content %>"</p></div>
+                  <p class="pt-1 mt-2">" <%= review.content %>"</p></div>
                   <p class="pt-1"><%= review.created_at.strftime("Reviewed on %d/%m/%Y at %H:%M")   %></p>
                   <p> <%= "⭐️" * review.rating  %> </p>
                 </div>
               </div>
             </div>
-          </div>
         <% end %>
+      </div>
     </div>
-
+  </div>
 </div>
 
 
