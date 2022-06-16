@@ -13,13 +13,13 @@
   <div class="" style="height: 70px;"></div>
 
   <div class="line-chart">
-    <h2>Stress Level before and after walk</h2>
+    <h2 style="font-size: 18px;">Stress levels before and after walk</h2>
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
   </div>
 
 
       <div class="pie-chart">
-        <h2>Music vs Meditation</h2>
+        <h2 style="text-align: center;">Music vs Meditation</h2>
         <%= pie_chart({music: 3, meditation: 2}) %>
       </div>
 
@@ -56,4 +56,3 @@
 
     <%# <div class="charts"> %>
 <%# <div class="" style="height: 85px;"></div> %>
-
