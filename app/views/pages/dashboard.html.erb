@@ -12,14 +12,14 @@
   <div class="" style="height: 70px;"></div>
 
   <div class="line-chart">
-    <h2>Stress Level before and after walk</h2>
+    <h3>Stress level before and after walk</h3>
     <%= line_chart [{name: "initial stress level", data: @walk_stress_levels_before, color: ["purple"]},  {name: "post stress level", data: @walk_stress_levels_after, color: ["#81C803"]}] %>
   </div>
 
 
       <div class="pie-chart">
-        <h2>Music vs Meditation</h2>
-        <%= pie_chart({music: 3, meditation: 2}) %>
+        <h3>Music vs Meditation</h3>
+        <%= pie_chart @music_meditation, colors: ["purple", "#81C803"] %>
       </div>
 
   <div class="cards-dashboard">
@@ -55,4 +55,3 @@
 
     <%# <div class="charts"> %>
 <%# <div class="" style="height: 85px;"></div> %>
-
