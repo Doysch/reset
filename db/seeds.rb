@@ -11,9 +11,9 @@ Review.destroy_all
 
 puts "creating users"
 
-user1 = User.create!(email: "dave@gmail.com", password: "123456", username: "DaveB", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/dave_szer7b.jpg")
+user3 = User.create!(email: "dave@gmail.com", password: "123456", username: "DaveB", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/dave_szer7b.jpg")
 user2 = User.create!(email: "pilar@gmail.com", password: "123456", username: "PilarS", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/Pilar_srbjl9.jpg")
-user3 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrichy", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/rich_ob5dd1.jpg")
+user1 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrichy", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/rich_ob5dd1.jpg")
 user4 = User.create!(email: "rob@gmail.com", password: "123456", username: "Robsta", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/Rob_ja9tci.jpg")
 
 puts "Users created!"
