@@ -9,8 +9,8 @@ class PagesController < ApplicationController
     @walk_stress_levels_before = @walk_stress_levels_before.group_by {|k| k[0].strftime("%d %b, %Y")}.transform_values {|v| v.sum {|entry| entry[1]} / v.size }
     @walk_stress_levels_after = Walk.where(user: current_user).pluck(:updated_at, :stress_level_after)
     @walk_stress_levels_after = @walk_stress_levels_after.group_by {|k| k[0].strftime("%d %b, %Y")}.transform_values {|v| v.sum {|entry| entry[1]} / v.size }
-    @music_meditation = Walk.where(user: current_user).group(:music).count
-    @music_meditation = @music_meditation.transform_keys { |k| k.to_s.capitalize }
+    @music_meditation_raw = Walk.where(user: current_user).group(:music).count
+    @music_meditation = @music_meditation_raw.transform_keys { |k| k.to_s.capitalize }
 
   end
 
