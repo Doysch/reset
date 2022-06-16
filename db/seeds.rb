@@ -11,9 +11,9 @@ Review.destroy_all
 
 puts "creating users"
 
-user1 = User.create!(email: "dave@gmail.com", password: "123456", username: "Davey-boy", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/dave_szer7b.jpg")
-user2 = User.create!(email: "pilar@gmail.com", password: "123456", username: "PSanchez", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/Pilar_srbjl9.jpg")
-user3 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrich", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/rich_ob5dd1.jpg")
+user1 = User.create!(email: "dave@gmail.com", password: "123456", username: "DaveB", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/dave_szer7b.jpg")
+user2 = User.create!(email: "pilar@gmail.com", password: "123456", username: "PilarS", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/Pilar_srbjl9.jpg")
+user3 = User.create!(email: "rich@gmail.com", password: "123456", username: "Rrrrichy", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/rich_ob5dd1.jpg")
 user4 = User.create!(email: "rob@gmail.com", password: "123456", username: "Robsta", photo: "https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655310629/Rob_ja9tci.jpg")
 
 puts "Users created!"
@@ -292,7 +292,7 @@ puts "created review1 #{review1}!"
 
 review2 = Review.create!(
   user_id: user2.id,
-  greenspace_id: greenspace1.id,
+  greenspace_id: greenspace3.id,
   rating: 5,
   content: "This was so peaceful.It really reset my day and managed to be very productive afterwards"
 )
@@ -310,7 +310,7 @@ puts "created review3 #{review3}!"
 
 review4 = Review.create!(
   user_id: user3.id,
-  greenspace_id: greenspace2.id,
+  greenspace_id: greenspace3.id,
   rating: 4,
   content: "The walk was serene. So great to be in a greenspace"
 )
@@ -319,9 +319,9 @@ puts "created review4 #{review4}!"
 
 review5 = Review.create!(
   user_id: user4.id,
-  greenspace_id: greenspace2.id,
-  rating: 4,
-  content: "There are many paths to choose from and it really did make my day!"
+  greenspace_id: greenspace3.id,
+  rating: 5,
+  content: "There are many paths to choose from and it really did make my day."
 )
 
 puts "created review5 #{review5}!"
