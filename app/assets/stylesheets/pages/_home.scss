@@ -87,8 +87,8 @@
   border-radius: 4px 0 0 4px;
 }
 
-.mapboxgl-ctrl-geocoder--input:placeholder {
-  color: red !important;
+.mapboxgl-ctrl-geocoder--input {
+  padding: 6px 43px !important;
 }
 
 .suggestions {
