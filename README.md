@@ -6,10 +6,14 @@ Have you ever been stressed at work? Modern life gets very hectic and there come
 
 Reset is a mobile app that finds the green space for you to get away from that stressful environment. It provides you with:
 <ul>
-  <li> options of different greenspaces local to you</li>
+  <li> options of different greenspaces local to you with photos </li>
   <li> the time it will take to walk there at a mindful pace in minutes</li>
-  <li> suggests either a calming musical accompaniment or guided meditation </li>
-  <li> provides the ability for you to record </li>
+  <li> either a calming musical accompaniment or guided meditation to your walk based on your choice </li>
+  <li> registers and saves your stress levels before an after the walk </li>
+  <li> provides a personal dashboard where you can see your previous walks </li>
+  <li> provides the ability for you to record your own experiences in a diary </li>
+  <li> reviews of the greenspaces from other users</li>
+</ul>
 
 
 We built it from scratch using Ruby on Rails with JavaScript, SCSS, Stimulus and utlising Mapbox APIs. 
