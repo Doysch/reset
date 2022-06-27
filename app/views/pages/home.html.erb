@@ -1,36 +1,28 @@
+<%# main content %>
 <div class="banner">
-<video id="background-video" autoplay loop muted poster="https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655225173/reset_autumn_sibjt1.jpg">
-<source src="https://res.cloudinary.com/dpk3pz6zs/video/upload/v1655294364/theeee_one_wjsxkl.mp4" type="video/mp4">
-</video>
+  <video id="background-video" autoplay loop muted poster="https://res.cloudinary.com/dpk3pz6zs/image/upload/v1655225173/reset_autumn_sibjt1.jpg">
+    <source src="https://res.cloudinary.com/dpk3pz6zs/video/upload/v1655294364/theeee_one_wjsxkl.mp4" type="video/mp4">
+  </video>
   <div class="banner-content">
     <%= image_tag 'logo_light.png', class:'reset-logo' %>
     <div class="w-100">
-    <h3 style="color:#EADDB8;font-size:38px;font-weight:bold;margin-bottom: 16px; text-align: center !important;">Reset your mind</h3>
-    <%# <p style="color:whitesmoke;font-size: 18px; width:70vw;font-style: italic;font-family:nunito;">Take care of your mental health by taking a mindful walk to a greenspace</p> %>
-    <p class="description-homepage">Take care of your mental health by taking a mindful walk to a greenspace</p>
-
+      <h3>Reset your mind</h3>
+      <p class="description-homepage">Take care of your mental health by taking a mindful walk to a greenspace</p>
     </div>
-
-
-
-
-
-    <%# <h2 class="ml3">Finding happiness through greenspaces</h2> %>
-
-
   </div>
 
+  <%# search bar %>
   <div class="search_bar">
     <div class ="d-flex flex-row-reverse align-items-center" data-controller="address-autocomplete"data-address-autocomplete-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
-    <%= form_tag greenspaces_path, method: :get, class: "" do %>
-      <%= text_field_tag :query,
+      <%= form_tag greenspaces_path, method: :get, class: "" do %>
+        <%= text_field_tag :query,
         params[:query],
         class: "form-control d-none",
         placeholder: "Enter location",
         data: {target: "address-autocomplete.address"}
       %>
-      <%= submit_tag "Find Walks", class: "btn btn-search", style: "padding: 12px 12px; font-weight: bold" %>
-    <% end %>
+        <%= submit_tag "Find Walks", class: "btn btn-search", style: "padding: 12px 12px; font-weight: bold" %>
+      <% end %>
     </div>
   </div>
 </div>
