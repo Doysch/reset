@@ -19,5 +19,4 @@ We had 8 days to design and implement this. We used Figma to design the look and
 
 If we were to do this again we would have spent more time making the front end look slicker and more user-friendly. However, we decided to make it a priority to make it functional considering the core idea of our app being mental health focussed. 
  
-![reset mobile screenshot](https://user-images.githubusercontent.com/92148649/175961585-c3069c7d-c819-47ef-8810-afa805780a9a.jpg)
-
+![reset mobile screenshot sm](https://user-images.githubusercontent.com/92148649/175962215-2524cca0-3db5-4737-8b99-ce9fc6464a41.jpeg)
