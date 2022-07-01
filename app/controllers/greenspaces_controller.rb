@@ -18,7 +18,9 @@ class GreenspacesController < ApplicationController
     @markers = [
       {
         lat: @greenspace.latitude,
-        lng: @greenspace.longitude
+        lng: @greenspace.longitude,
+        # info_window: render_to_string(partial: "info_window", locals: {greenspace: greenspace}),
+        image_url: helpers.asset_url("park-icon.png")
       }
     ]
 
@@ -38,7 +40,7 @@ class GreenspacesController < ApplicationController
 
   def index
     @greenspaces = Greenspace.all
-    # @greenspaces.
+
     if params[:query].present?
       $postcode = params[:query]
       @starting_coords = Geocoder.search(params[:query]).first.coordinates
@@ -48,10 +50,13 @@ class GreenspacesController < ApplicationController
         greenspace.distance = time
       end
     end
+
     @markers = @greenspaces.geocoded.map do |greenspace|
       {
         lat: greenspace.latitude,
-        lng: greenspace.longitude
+        lng: greenspace.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {greenspace: greenspace}),
+        image_url: helpers.asset_url("park-icon.png")
       }
     end
   end
