@@ -25,11 +25,14 @@ class WalksController < ApplicationController
     @markers = [
       {
         lat: @walk.greenspace.latitude,
-        lng: @walk.greenspace.longitude
+        lng: @walk.greenspace.longitude,
+        # info_window: render_to_string(partial: "info_window", locals: {greenspace: greenspace}),
+        image_url: helpers.asset_url("park-icon.png")
       },
       {
         lat: @walk.latitude,
-        lng: @walk.longitude
+        lng: @walk.longitude,
+        image_url: helpers.asset_url("pin-location.png")
       }
 
     ]
