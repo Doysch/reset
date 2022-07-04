@@ -64,7 +64,8 @@ greenspace2.save
 puts "created #{greenspace2.name}!!!"
 
 greenspace3 = Greenspace.create!(
-  address: "18 Queensbridge Rd, London E2 8NS",
+  # address: "18 Queensbridge Rd, London E2 8NS",
+  address: "Yorkton St, London E2 8NH",
   description: "contains a small but luxuriant nature reserve and is very popular with dog walkers, families and the occasional hipster. Next to it is a woodland walkway and it backs onto Hackney City Farm.",
   average_rating: 5,
   name: "Haggerston Park"
