@@ -19,7 +19,6 @@ class GreenspacesController < ApplicationController
       {
         lat: @greenspace.latitude,
         lng: @greenspace.longitude,
-        # info_window: render_to_string(partial: "info_window", locals: {greenspace: greenspace}),
         image_url: helpers.asset_url("park-icon.png")
       }
     ]
