@@ -11,10 +11,11 @@
                           <div class="card-index-rating">
             <p class="align-items-center px-3 py-2"><em><%= greenspace.description %></em></p>
           </div>
-
-                <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
-                  <p> <%= greenspace.distance %> mins walk</p>
-                </div>
+                <% if params[:query].present? %>
+                  <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
+                    <p> <%= greenspace.distance %> mins walk</p>
+                  </div>
+                <% end %>
               </div>
    <p style="text-align: end; padding-right: 10px; margin-bottom: 8px"><%= "⭐️" * greenspace.average_rating %></p>
     </div>
