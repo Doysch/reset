@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review.greenspace = @greenspace
     @review.user = current_user
     if @review.save
-      redirect_to dashboard_path
+      redirect_to greenspace_path(@greenspace)
     else
       render :new, status: :unprocessable_entity
     end
