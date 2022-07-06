@@ -44,7 +44,7 @@ puts "created #{greenspace1.name}!!!"
 
 greenspace2 = Greenspace.create!(
   address: "66 Old Nichol Street, London E2 7HP",
-  description: "is a traditional London garden square in Shoreditch's fashionable cultural quarter. The square is a much appreciated green space for residents, workers and visitors alike in a densely urbanised area.",
+  description: "is a traditional London garden square in Shoreditch's fashionable cultural quarter. The square is a much appreciated space in an urbanised area.",
   average_rating: 3,
   name: "Hoxton Square"
 )
@@ -66,7 +66,7 @@ puts "created #{greenspace2.name}!!!"
 greenspace3 = Greenspace.create!(
   # address: "18 Queensbridge Rd, London E2 8NS",
   address: "Yorkton St, London E2 8NH",
-  description: "contains a small but luxuriant nature reserve and is very popular with dog walkers, families and the occasional hipster. Next to it is a woodland walkway and it backs onto Hackney City Farm.",
+  description: "contains a small but luxuriant nature reserve and is very popular with dog walkers, families and the occasional hipster. It backs onto the farm.",
   average_rating: 5,
   name: "Haggerston Park"
 )
@@ -88,7 +88,7 @@ puts "created #{greenspace3.name}!!!"
 
 greenspace4 = Greenspace.create!(
   address: "362 Old Ford Rd, London E9 7DE",
-  description: "is the largest park in Tower Hamlets and one of London's most visited green spaces with approximately 9m visitors every year.The park spans 86.18 hectares of open space.",
+  description: "is the largest park in Tower Hamlets and one of London's most visited green spaces with 9m visitors every year.The park has a lot of open space.",
   average_rating: 4,
   name: "Victoria Park"
 )
@@ -110,7 +110,7 @@ puts "created #{greenspace4.name}!!!"
 
 greenspace5 = Greenspace.create!(
   address: "Smart St, Bethnal Green, London E2 0SN",
-  description: "is a jewel of a park that is still one of London's best kept secrets. Set back from Roman Road, it is often overlooked for better known green spaces in East London. ",
+  description: "is a jewel of a park that is still one of London's best kept secrets. It is often overlooked for better known green spaces in the East of London.",
   average_rating: 4,
   name: "Meath Gardens"
 )
@@ -132,7 +132,7 @@ puts "created #{greenspace5.name}!!!"
 
 greenspace6 = Greenspace.create!(
   address: "Vallance Rd, London E2 6HD",
-  description: "is the largest open space in the west of the borough. It is very popular with families and has a wide range of facilities and lots of routes for walking. ",
+  description: "is the largest open space in the west of the borough. It is popular with families and has a range of facilities with lots of routes for walking. ",
   average_rating: 3,
   name: "Weavers Field"
 )
@@ -154,7 +154,7 @@ puts "created #{greenspace6.name}!!!"
 
 greenspace7 = Greenspace.create!(
   address: "7c Rhoda St, London E2 7EF",
-  description: "is one of Hackney's smaller parks, but is well used and holds a Green Flag award - given annually to the best parks in the country.",
+  description: "is one of Hackney's smaller parks, but is well used and holds a Green Flag award - given annually to the best parks in the country. Try it out!",
   average_rating: 3,
   name: "East Shoreditch Park "
 )
@@ -176,7 +176,7 @@ puts "created #{greenspace7.name}!!!"
 
 greenspace8 = Greenspace.create!(
   address: "Buxton St, London E1 5AR",
-  description: "is a city farm in the London Borough of Tower Hamlets, a short distance from Brick Lane. The farm is 1.3-acres and is well kept",
+  description: "is a city farm in the London Borough of Tower Hamlets, a short distance from Brick Lane. The farm is around 1.3-acres and is a well kept area. ",
   average_rating: 3,
   name: "Spitalfields City Farm "
 )
