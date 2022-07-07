@@ -72,7 +72,9 @@
               <div>
                 <p class="pt-1 mt-2">" <%= review.content %>"</p>
                 <p class="pt-1"><%= review.created_at.strftime("Reviewed on %d/%m/%Y at %H:%M") %></p>
+                <% if review.rating.present? %>
                 <p> <%= "⭐️" * review.rating  %> </p>
+                <% end %>
               </div>
             </div>
           </div>
