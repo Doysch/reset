@@ -9,7 +9,7 @@
           <div class="card-index-infos">
             <h2><%=  greenspace.name %></h2>
             <div class="card-index-rating">
-              <p class="align-items-center px-3 py-2"><em><%= greenspace.description %></em></p>
+              <p class="align-items-center px-2 py-2"><em><%= greenspace.description %></em></p>
             </div>
             <% if params[:query].present? %>
               <div class="card-trip-user d-flex walk-time align-items-center justify-content-center">
@@ -28,4 +28,3 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-<%# Class removed from main container => index-margin %>
