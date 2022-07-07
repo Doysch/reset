@@ -2,84 +2,88 @@
   <%= image_tag 'logo.png', class:'index-logo' %>
   <h2 class="text-center"><%= @greenspace.name %></h2>
 
-  <div class="card-trip">
+  <%#media queries%>
+  <div class="container-show">
+    <div class="card-trip">
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" role="listbox" style=" width:100%; height: 200px !important;">
-        <div class="carousel-item active">
-          <%= cl_image_tag @greenspace.photos[0].key, class:"d-block w-100" %>
-        </div>
-        <div class="carousel-item">
-          <%= cl_image_tag @greenspace.photos[1].key, class:"d-block w-100" %>
-        </div>
-        <div class="carousel-item">
-          <%= cl_image_tag @greenspace.photos[2].key, class:"d-block w-100" %>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox" style=" width:100%; height: 200px !important;">
+          <div class="carousel-item active">
+            <%= cl_image_tag @greenspace.photos[0].key, class:"d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @greenspace.photos[1].key, class:"d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @greenspace.photos[2].key, class:"d-block w-100" %>
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="middle-images mt-2 mx-2">
-      <%= cl_image_tag @greenspace.photos[0].key %>
-      <%= cl_image_tag @greenspace.photos[1].key %>
-      <%= cl_image_tag @greenspace.photos[2].key %>
-    </div>
-
-
-
-    <div class="card-trip-infos">
-      <div>
-        <h2 class="text-center"><%= @greenspace.name %></h2>
-        <p class="pt-2 pb-2" style="font-size:15px;"><%= @greenspace.description %></p>
-        <% if @show_distance_calcs %>
-          <p><strong>Distance:</strong> <%= @greenspace.distance_for_index.round(1) %> miles </p>
-          <p><strong>Time:</strong> <%= @greenspace.distance %> mins </p>
-        <% end %>
+      <div class="middle-images mt-2 mx-2">
+        <%= cl_image_tag @greenspace.photos[0].key %>
+        <%= cl_image_tag @greenspace.photos[1].key %>
+        <%= cl_image_tag @greenspace.photos[2].key %>
       </div>
+
+
+
+      <div class="card-trip-infos">
+        <div>
+          <h2 class="text-center"><%= @greenspace.name %></h2>
+          <p class="pt-2 pb-2" style="font-size:15px;"><%= @greenspace.description %></p>
+          <% if @show_distance_calcs %>
+            <p><strong>Distance:</strong> <%= @greenspace.distance_for_index.round(1) %> miles </p>
+            <p><strong>Time:</strong> <%= @greenspace.distance %> mins </p>
+          <% end %>
+        </div>
+      </div>
+
+
+
     </div>
 
 
+    <%#Map%>
+    <div id= "map-show" class=" my-3 mt-3"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-search-value="<%= @search_coordinates.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" id="walk-calculator">
+    </div>
 
   </div>
 
-
-  <%#Map%>
-  <div class=" my-3 mt-3" style="width: 100%; height: 300px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-search-value="<%= @search_coordinates.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" id="walk-calculator">
-  </div>
-
-  <div class="d-grid gap-2">
+  <div id="btn-show" class="d-grid gap-2">
     <%= link_to "Take this walk", new_greenspace_walk_path(@greenspace, query: params[:query]), class:"btn mb-3 rounded-corners" %>
   </div>
 
 
   <%#  Reviews %>
-  <div class="mb-5 ">
-    <strong><h2 class="text-center my-4">Reviews</h2></strong>
-      <% if @greenspace.reviews.each do |review| %>
-        <div class="card-trip mt-2 mb-4">
-          <div class="card-trip-infos">
+  <strong><h2 class="text-center my-4">Reviews</h2></strong>
+  <div id="reviews-show" class="mb-5 ">
+    <% if @greenspace.reviews.each do |review| %>
+      <div class="card-trip mt-2 mb-4">
+        <div class="card-trip-infos">
+          <div>
+            <div style="display: inline-block;">
+              <h2 style="float: left;"><strong><%= review.user.username %></strong></h2>
+            </div>
+            <div style="float:right;">
+              <%= image_tag review.user.photo, class:"avatar" %>
+            </div>
             <div>
-              <div style="display: inline-block;">
-                <h2 style="float: left;"><strong><%= review.user.username %></strong></h2>
-              </div>
-              <div style="float:right;">
-                <%= image_tag review.user.photo, class:"avatar" %>
-              </div>
-              <div>
-                <p class="pt-1 mt-2">" <%= review.content %>"</p>
-                <p class="pt-1"><%= review.created_at.strftime("Reviewed on %d/%m/%Y at %H:%M") %></p>
-                <% if review.rating.present? %>
-                <p> <%= "⭐️" * review.rating  %> </p>
-                <% end %>
-              </div>
+              <p class="pt-1 mt-2">" <%= review.content %>"</p>
+              <p class="pt-1"><%= review.created_at.strftime("Reviewed on %d/%m/%Y at %H:%M") %></p>
+              <% if review.rating.present? %>
+              <p> <%= "⭐️" * review.rating  %> </p>
+              <% end %>
             </div>
           </div>
         </div>
-        <% end %>
+      </div>
       <% end %>
+    <% end %>
   </div>
 </div>
