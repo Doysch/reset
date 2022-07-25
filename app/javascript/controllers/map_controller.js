@@ -6,7 +6,7 @@ export default class extends Controller {
     search: Array
   }
   connect() {
-    console.log("hi from map controller")
+    // console.log("hi from map controller")
     mapboxgl.accessToken = this.apiKeyValue
     this.map = new mapboxgl.Map({
       container: this.element,
@@ -47,7 +47,7 @@ export default class extends Controller {
       { method: 'GET' }
     );
     const json = await query.json();
-    console.log(json)
+    // console.log(json)
     const data = json.routes[0];
     const route = data.geometry.coordinates;
     const geojson = {
