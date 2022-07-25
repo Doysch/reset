@@ -8,9 +8,9 @@ export default class extends Controller {
 
   static targets = ["address"]
   connect() {
-    console.log("Hello from address autocomplete controller");
-    console.log(this.addressTarget)
-    console.log(this.addressTarget.value)
+    // console.log("Hello from address autocomplete controller");
+    // console.log(this.addressTarget)
+    // console.log(this.addressTarget.value)
     this.geocoder = new MapboxGeocoder({
       accessToken: this.apiKeyValue,
       types: "country,region,place,postcode,locality,neighborhood,address",
